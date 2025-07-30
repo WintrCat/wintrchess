@@ -1,0 +1,49 @@
+.wrapper {
+    display: flex;
+    padding: 5px;
+    box-sizing: border-box;
+
+    border-radius: 10px;
+
+    background-color: var(--ui-shade-4);
+}
+
+.button {
+    margin-bottom: 3px;
+    width: 50%;
+
+    color: #777d85;
+    box-shadow: 0 3px 0 #24262b;
+
+    transform: translateY(0px);
+    overflow-wrap: anywhere;
+
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    color: white;
+
+    filter: brightness(1) !important;
+}
+
+.button:active {
+    box-shadow: 0 0 0 #24262b;
+    transform: translateY(3px);
+}
+
+.selectedButton {
+    background-color: var(--ui-shade-6);
+
+    color: white;
+}
+
+.reportButton {
+    border-radius: 10px 0 0 10px;
+    border-right: 1px solid var(--ui-shade-4);
+}
+
+.analysisButton {
+    border-radius: 0 10px 10px 0;
+    border-left: 1px solid var(--ui-shade-4);
+}

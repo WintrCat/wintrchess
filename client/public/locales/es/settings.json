@@ -1,0 +1,21 @@
+{
+    "boardAndPieces": {
+        "title": "Tablero y Piezas",
+        "boardColour": "Color del Tablero",
+        "lightSquareColour": "Escaque Claro",
+        "darkSquareColour": "Escaque Oscuro",
+        "presetsTitle": "Predeterminados",
+        "presets": {
+            "wooden": "Madera",
+            "tournament": "Torneo",
+            "blue": "Azul",
+            "ice": "Hielo",
+            "marshmallow": "Malvavisco"
+        }
+    },
+    "bugReporting": {
+        "title": "Reporte de Errores",
+        "bugReportingMode": "Modo de Reporte de Errores",
+        "bugReportingModeDescription": "Ayúdanos a encontrar y reparar errores. El modo de reporte de errores activa un pequeño widget en la esquina inferior de la pantalla donde puedes hacer clic para copiar los registros de la consola."
+    }
+}

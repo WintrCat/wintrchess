@@ -1,0 +1,15 @@
+{
+    "title": "Centrum pomocy",
+    "contact": {
+        "title": "Skontaktuj się z nami",
+        "message": "Jeśli chcesz się z nami skontaktować, możesz wysłać wiadomość e-mail na adres:"
+    },
+    "analysis": {
+        "title": "Analizowanie gry",
+        "part1": "Możesz analizować swoje gry w szachy",
+        "part2": "Strona analizy WintrChess",
+        "part3": ". Oceny magazynów, procenty dokładności i klasyfikacje przesuń - aby znaleźć swoje wspaniałości i błotności - są dostarczane nieodpłatnie. Na środku strony znajdziesz tablicę analityczną, gdzie możesz zobaczyć ruchy gry, którą wybrałeś. Aby wybrać grę, musisz użyć selektora gry, który dostarczyliśmy po prawej stronie paska bocznego. Wygląda tak:",
+        "part4": "Możesz wprowadzić dowolną grę używając jej PGN. Jeśli chcesz, możesz również wybrać grę ze swoich Chess. Jeśli podasz nazwę użytkownika, konto om lub Lichess. Musisz kliknąć przycisk \"Szukaj gry\", aby przeglądać gry na Twoim koncie, i może wybrać dowolny z nich, klikając na nią. Na koniec możesz wprowadzić jedną pozycję FEN. W każdym razie będziesz mógł dodawać ruchy ręcznie po zaimportowaniu gry, wszystkie zostaną ocenione i zaklasyfikowane w trakcie lotu.",
+        "part5": "Po wybraniu gry wystarczy kliknąć przycisk \"Analizuj\", aby rozpocząć analizę. Możesz również przesunąć element na płytce, jeśli chcesz zacząć od pozycji początkowej."
+    }
+}

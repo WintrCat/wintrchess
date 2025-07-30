@@ -1,0 +1,114 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 30px;
+    width: 100%;
+}
+
+.missingThumbnailMessage {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+    color: gray;
+}
+
+.thumbnailPreview {
+    padding: 8px;
+    box-sizing: border-box;
+    width: min(450px, 100%);
+
+    border-radius: 10px;
+    background-color: var(--ui-shade-3);
+}
+
+.thumbnailLoader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--ui-shade-2);
+}
+
+.thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.metadata {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-sizing: border-box;
+
+    padding: 8px;
+    width: min(450px, 100%);
+
+    border-radius: 10px;
+    background-color: var(--ui-shade-3);
+}
+
+.tagMetadata {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    position: relative;
+}
+
+.thumbnailUploader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.formatSelector {
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+
+    border-radius: 10px;
+    background-color: var(--ui-shade-3);
+}
+
+.editor {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    width: 90%;
+    height: 550px;
+    box-sizing: border-box;
+
+    border-radius: 10px;
+    background-color: var(--ui-shade-3);
+}
+
+@media (max-width: 600px) {
+    .editor {
+        width: 100%;
+    }
+}
+
+.editorContent {
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    word-break: break-all;
+    overflow: auto;
+
+    border: none;
+    background-color: var(--ui-shade-2);
+    font-size: 1.1rem;
+    color: white;
+
+    resize: none;
+}
+
+.editorContent a {
+    color: white;
+}

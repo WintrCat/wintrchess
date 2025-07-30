@@ -1,0 +1,36 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: var(--ui-shade-4);
+}
+
+.chart {
+    border-radius: 10px;
+    background-color: #1f1f1f;
+
+    cursor: pointer !important;
+    overflow: hidden;
+}
+
+.tooltip {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.tooltipEvaluation {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.tooltipMove {
+    font-size: 0.9rem;
+}

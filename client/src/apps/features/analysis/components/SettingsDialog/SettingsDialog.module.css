@@ -1,0 +1,63 @@
+.settingsDialog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(400px, 100%);
+    max-height: min(600px, 100%);
+
+    overflow-y: auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+
+    background-color: var(--ui-shade-2);
+    color: white;
+    font-family: "Nunito";
+    font-weight: 700;
+
+    overflow-wrap: anywhere;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+    padding: 15px;
+    width: 100%;
+}
+
+.setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+
+    color: white;
+
+    overflow-wrap: anywhere;
+}
+
+.subsetting {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.settingIcon {
+    width: 25px;
+    height: 25px
+}
+
+.settingDescription {
+    position: fixed;
+    max-width: 250px;
+}

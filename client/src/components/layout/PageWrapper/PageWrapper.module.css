@@ -1,0 +1,8 @@
+.announcementMarkdown * {
+    margin: 0;
+    color: white;
+}
+
+.content {
+    min-height: calc(100vh - 65px);
+}

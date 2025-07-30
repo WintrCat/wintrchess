@@ -1,0 +1,17 @@
+.content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.updateDialogInputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.inputField {
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 5px;
+}

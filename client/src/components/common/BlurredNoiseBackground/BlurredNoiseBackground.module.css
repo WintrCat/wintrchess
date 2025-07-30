@@ -1,0 +1,6 @@
+.blurredShape {
+    position: absolute;
+
+    border-radius: 100%;
+    filter: blur(24px) opacity(0.5);
+}

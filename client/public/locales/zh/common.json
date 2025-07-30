@@ -1,0 +1,49 @@
+{
+    "loading": "正在加载……",
+    "back": "返回",
+    "settings": "设置",
+    "error": "错误",
+    "reset": "重置",
+    "enabled": "已启用",
+    "disabled": "已禁用",
+    "navigationBar": {
+        "support": "支持",
+        "signIn": "登入",
+        "tooltips": {
+            "support": "支持我们❤",
+            "help": "帮助中心"
+        }
+    },
+    "sidebar": {
+        "analysis": "复盘分析",
+        "archive": "存档",
+        "news": "新闻"
+    },
+    "footer": {
+        "privacyPolicy": "隐私政策"
+    },
+    "confirmDialog": {
+        "yes": "是",
+        "no": "否"
+    },
+    "gameListing": {
+        "gameResults": {
+            "unopinionated": {
+                "win": "白方获胜",
+                "draw": "和棋",
+                "lose": "黑方获胜",
+                "unknown": "未知"
+            },
+            "opinionated": {
+                "win": "获胜",
+                "draw": "和棋",
+                "lose": "落败",
+                "unknown": "未知的"
+            }
+        }
+    },
+    "bugReportWidget": {
+        "tooltip": "复制控制台日志",
+        "toast": "控制台日志已复制！"
+    }
+}

@@ -1,0 +1,30 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: white;
+}
+
+.profileImage {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 5px;
+    background-color: var(--ui-shade-4);
+}
+
+.title {
+    padding: 0 3px;
+
+    border-radius: 5px;
+    background-color: rgb(180, 20, 20);
+}
+
+.username {
+    color: white;
+}
+
+.rating {
+    color: grey;
+}

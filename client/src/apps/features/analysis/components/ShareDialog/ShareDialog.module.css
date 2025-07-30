@@ -1,0 +1,59 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: min(400px, 100%);
+
+    color: white;
+
+    overflow-y: auto;
+}
+
+.title {
+    box-sizing: border-box;
+    padding: 15px;
+    padding-right: 50px;
+    width: 100%;
+
+    background-color: var(--ui-shade-2);
+    font-family: "Nunito";
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    padding: 15px;
+    padding-top: 0;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 3px;
+    width: 100%;
+}
+
+.field {
+    padding: 10px;
+    
+    border-radius: 5px;
+    font-size: 0.8rem;
+
+    word-break: break-all;
+    resize: none;
+    cursor: text;
+}
+
+.fieldCopy {
+    border-radius: 5px;
+}
+
+.areaFieldCopy {
+    border-radius: 0;
+    border-top-left-radius: 5px;
+}

@@ -1,0 +1,81 @@
+{
+    "title": "गेम की रिपोर्ट",
+    "settings": {
+        "title": "विश्लेषण सेटिंग्स",
+        "engine": "इंजन"
+    },
+    "gameSelector": {
+        "sourceLabel": "गेम लोड करें यहाँ से",
+        "sourcePlaceholders": {
+            "pgn": "पीजीएन पेस्ट करें...",
+            "fen": "एफईएन स्ट्रिंग...",
+            "chessCom": "चेस.कॉम उपयोगकर्ता नाम...",
+            "lichess": "लिचेस उपयोगकर्ता नाम..."
+        },
+        "searchGamesButton": "गेम्स खोजें",
+        "uploadPGNButton": "पीजीएन फ़ाइल अपलोड करें",
+        "errors": {
+            "noGameSelected": "कृपया एक शतरंज का गेम चुनें",
+            "invalidGame": "अमान्य खेल का विश्लेषण करने में नाकामी"
+        }
+    },
+    "gameSearchMenu": {
+        "title": "एक गेम चुनें",
+        "loading": "गेम्स की खोज कर रहे हैं...",
+        "loadingLong": "यह थोड़ा समय ले रहा है, कृपया प्रतीक्षा करें...",
+        "userNotFound": "हमें इस उपयोगकर्ता नाम के साथ कोई खाता नहीं मिला।",
+        "noGamesFound": "हम इस महीने कोई गेम्स नहीं ढूंढ सके",
+        "selectedToast": "गेम चुना गया!"
+    },
+    "analyseButton": "विश्लेषण करें",
+    "analysisError": "विश्लेषण फेल हो गया; शायद आपके ब्राउज़र की समस्या है।",
+    "stateTreeEditor": {
+        "moveContextMenu": {
+            "delete": "मूव/चाल हटाएँ",
+            "promote": "मूव/चाल को प्रमोट करें"
+        },
+        "addNodePrompt": "कुछ चालें खेलें..."
+    },
+    "stateTreeTraverser": {
+        "beginning": "शुरुआत पर जाएँ",
+        "back": "आखिरी चाल",
+        "play": "खेलें",
+        "pause": "रोकें",
+        "next": "अगली चाल",
+        "end": "अंत तक जाएं"
+    },
+    "progressReporter": {
+        "evaluating": "हम मूल्यांकन कर रहे हैं...",
+        "awaitingCaptcha": "CAPTCHA का हल करना...",
+        "classifying": "हम वर्गीकृत कर रहे हैं...",
+        "evaluatingTooltip": "अगर इसमें कुछ समय लगता है, तो आप सेटिंग्स में इंजन की गहराई कम करने की कोशिश कर सकते हैं।",
+        "captchaTooltip": "ये थोड़ी देर ले सकता है...",
+        "captchaVerifyFailed": "CAPTCHA को वेरिफाई नहीं कर सके; पेज को रीफ्रेश करने की कोशिश करो.",
+        "captchaLoadFailed": "CAPTCHA लोड नहीं हो सका। तुम्हारा ब्राउज़र शायद पुराना है।",
+        "captchaUnknownError": "अनजान CAPTCHA एरर; पेज को फिर से रीफ्रेश करने की कोशिश करो.",
+        "completeNotification": "विश्लेषण पूरा हो गया है"
+    },
+    "analysisTabBar": {
+        "report": "रिपोर्ट ",
+        "analysis": "विश्लेषण"
+    },
+    "accuraciesCard": {
+        "title": "सटीकताएँ"
+    },
+    "classifiedMoveCard": {
+        "unknownError": "क्लासिफिकेशन को लोड नहीं किया जा सका",
+        "insufficientLines": "यह सुनिश्चित करें कि पिछले चाल का पूरी तरह से वर्गीकरण के लिए मूल्यांकन किया गया है।",
+        "classifications": {
+            "brilliant": "बहुत शानदार है",
+            "best": "सबसे अच्छी चाल है",
+            "excellent": "बहुत अच्छा है",
+            "okay": "एक ठीक चाल है",
+            "inaccuracy": "एक गलतफहमी है",
+            "mistake": "एक गलती है",
+            "blunder": "एक गलती है",
+            "forced": "जबरदस्ती किया जाता है",
+            "theory": "यह सिद्धांत है",
+            "risky": "ये एक जोखिम भरा आइडिया है"
+        }
+    }
+}

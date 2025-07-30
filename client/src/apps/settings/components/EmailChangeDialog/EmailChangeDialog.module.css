@@ -1,0 +1,24 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    padding: 25px;
+    width: min(500px, 100%);
+}
+
+.message {
+    padding-right: 60px;
+}
+
+.verificationButtonContainer {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+.verificationButton {
+    width: min(225px, 100%);
+
+    overflow-wrap: anywhere;
+}

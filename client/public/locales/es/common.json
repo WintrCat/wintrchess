@@ -1,0 +1,39 @@
+{
+    "loading": "Cargando...",
+    "back": "Volver",
+    "settings": "Configuraciones",
+    "error": "Error",
+    "reset": "Restaurar",
+    "navigationBar": {
+        "support": "Ayude",
+        "tooltips": {
+            "support": "Apoyanos ❤️",
+            "help": "Centro de Ayuda"
+        }
+    },
+    "sidebar": {
+        "analysis": "Análisis",
+        "archive": "Archivo",
+        "news": "Noticias"
+    },
+    "gameListing": {
+        "gameResults": {
+            "unopinionated": {
+                "win": "Victoria del Blanco",
+                "draw": "Tablas",
+                "lose": "Victoria del Negro",
+                "unknown": "Desconocido"
+            },
+            "opinionated": {
+                "win": "Victoria",
+                "draw": "Tablas",
+                "lose": "Derrota",
+                "unknown": "Desconocido"
+            }
+        }
+    },
+    "bugReportWidget": {
+        "tooltip": "Copiar Registros de Consola",
+        "toast": "Registros de Consola Copiados!"
+    }
+}

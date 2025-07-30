@@ -1,0 +1,23 @@
+{
+    "boardAndPieces": {
+        "title": "Quân cờ và Bàn cờ",
+        "boardColour": "Màu bàn cờ",
+        "lightSquareColour": "Ô trắng",
+        "darkSquareColour": "Ô đen",
+        "presetsTitle": "Có sẵn",
+        "presets": {
+            "wooden": "Gỗ",
+            "tournament": "Giải đấu",
+            "blue": "Xanh dương",
+            "ice": "Băng",
+            "marshmallow": "Kẹo dẻo",
+            "pillow": "Gối"
+        }
+    },
+    "bugReporting": {
+        "title": "Báo lỗi",
+        "bugReportingMode": "Chế độ báo lỗi",
+        "bugReportingModeDescription": "Hãy giúp chúng tôi tìm và sửa lỗi. Chế độ báo lỗi kích hoạt một cửa sổ nhỏ ở góc dưới màn hình mà bạn có thể nhấn vào để sao chép nhật ký console."
+    },
+    "privacy": "Quyền riêng tư"
+}

@@ -1,0 +1,22 @@
+{
+    "boardAndPieces": {
+        "title": "棋盘和棋子",
+        "boardColour": "棋盘颜色",
+        "lightSquareColour": "白格颜色",
+        "darkSquareColour": "黑格颜色",
+        "presetsTitle": "预设",
+        "presets": {
+            "wooden": "木制",
+            "tournament": "锦标赛",
+            "blue": "蓝色",
+            "ice": "冰",
+            "marshmallow": "棉花糖",
+            "pillow": "枕头"
+        }
+    },
+    "bugReporting": {
+        "title": "缺陷报告",
+        "bugReportingMode": "缺陷报告模式",
+        "bugReportingModeDescription": "帮助我们找到和修复缺陷。缺陷报告模式激活你的屏幕下方角落里的一个小部件，你可以点击它来复制控制台日志。"
+    }
+}

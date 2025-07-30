@@ -1,0 +1,15 @@
+.wrapper {
+    padding: 5px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    
+    border-radius: 5px;
+
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.wrapper:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}

@@ -1,0 +1,7 @@
+.addNodePrompt {
+    display: flex;
+    align-items: center;
+    height: 28px;
+
+    color: rgba(220, 220, 220, 0.4);
+}

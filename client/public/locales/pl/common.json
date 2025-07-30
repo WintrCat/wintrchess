@@ -1,0 +1,39 @@
+{
+    "loading": "Wczytywanie...",
+    "back": "Wstecz",
+    "settings": "Ustawienia",
+    "error": "Błąd",
+    "reset": "Zresetuj",
+    "navigationBar": {
+        "support": "Wsparcie",
+        "tooltips": {
+            "support": "Wspomóż nas ❤️",
+            "help": "Centrum pomocy"
+        }
+    },
+    "sidebar": {
+        "analysis": "Analiza",
+        "archive": "Archiwum",
+        "news": "Aktualności"
+    },
+    "gameListing": {
+        "gameResults": {
+            "unopinionated": {
+                "win": "Wygrana białych",
+                "draw": "Remis",
+                "lose": "Wygrana czarnych",
+                "unknown": "Nieznane"
+            },
+            "opinionated": {
+                "win": "Wygrana",
+                "draw": "Remis",
+                "lose": "Porażka",
+                "unknown": "Nieznane"
+            }
+        }
+    },
+    "bugReportWidget": {
+        "tooltip": "Kopiuj dzienniki konsoli",
+        "toast": "Skopiowano dzienniki konsoli!"
+    }
+}

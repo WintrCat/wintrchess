@@ -1,0 +1,21 @@
+{
+    "boardAndPieces": {
+        "title": "Szachownica i figury",
+        "boardColour": "Kolor tablicy",
+        "lightSquareColour": "Jasny kwadrat",
+        "darkSquareColour": "Ciemny kwadrat",
+        "presetsTitle": "Szablony",
+        "presets": {
+            "wooden": "Drewniany",
+            "tournament": "Turniej",
+            "blue": "Niebieski",
+            "ice": "Lód",
+            "marshmallow": "Pianka"
+        }
+    },
+    "bugReporting": {
+        "title": "Zgłaszanie błędu",
+        "bugReportingMode": "Tryb zgłaszania błędów",
+        "bugReportingModeDescription": "Pomóż nam znaleźć i naprawić błędy. Tryb raportowania błędów aktywuje mały widżet w dolnym rogu ekranu, który możesz kliknąć, aby skopiować logi konsoli."
+    }
+}

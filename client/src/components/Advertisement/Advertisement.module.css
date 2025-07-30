@@ -1,0 +1,4 @@
+.dev {
+    border: 2px solid var(--ui-blue);
+    background-color: var(--ui-shade-6);
+}

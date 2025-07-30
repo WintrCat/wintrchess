@@ -1,0 +1,15 @@
+{
+    "title": "Hilfezentrum",
+    "contact": {
+        "title": "Kontaktiere uns",
+        "message": "Wenn Sie uns kontaktieren möchten, können Sie eine E-Mail senden an:"
+    },
+    "analysis": {
+        "title": "Analysiere ein Spiel",
+        "part1": "Du kannst deine Schachpartien auf der WintrChess Analyseseite Analyseseite",
+        "part2": "WintrChess Analyseseite",
+        "part3": ". Stockfishs Bewertungen, Genauigkeiten und Klassifizierungen - damit Sie Ihre Patzer und Brillanten Züge finden können - werden kostenlos zur Verfügung gestellt. Du findest ein Analysebrett im Zentrum der Seite, wo du die Züge deiner Partien ansehen kannst. Um eine Partie auszuwählen, musst du die Spielauswahl verwenden, die wir auf der rechten Seite zur Verfügung gestellt haben. Es sieht so aus:",
+        "part4": "Du kannst jedes Spiel mit seinem PGN importieren. Wenn du möchtest, kannst du auch ein Spiel von deinem Chess.com oder Lichess Konto auswählen, wenn du deinen Benutzernamen angibst. Klicke dazu auf den \"Spiele suchen\" Button, um die Spiele deines Kontos zu suchen und auswählen. Du kannst auch eine FEN Position importieren. Nachdem du eine Partie importiert hast, kannst auch selbst Züge auf dem Brett ausführen, die alle automatisch ausgewertet und klassifiziert werden.",
+        "part5": "Nachdem du eine Partie ausgewählt hast, klicke einfach den \"Analyse\" Button, um die Analyse zu starten. Du kannst auch eine Figur auf dem Brett ziehen, wenn du von der Startposition aus beginnen möchtest."
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "name": "shared",
+    "scripts": {
+        "build": "tsc && tsc-alias -f"
+    },
+    "dependencies": {
+        "@mliebelt/pgn-parser": "^1.4.18",
+        "better-auth": "^1.3.4",
+        "chess.js": "^1.4.0",
+        "lodash-es": "^4.17.21",
+        "zod": "^4.0.10"
+    },
+    "devDependencies": {
+        "@types/lodash-es": "^4.17.12",
+        "tsc-alias": "^1.8.16"
+    },
+    "exports": {
+        "./*": {
+            "types": "./dist/*.d.ts",
+            "import": "./dist/*.js"
+        }
+    },
+    "type": "module"
+}

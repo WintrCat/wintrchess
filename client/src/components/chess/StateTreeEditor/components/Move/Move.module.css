@@ -1,0 +1,22 @@
+.wrapper {
+    padding: 3px;
+
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.wrapper:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.current {
+    z-index: 1;
+    margin-bottom: -2px;
+
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-bottom: 2px solid #555;
+}

@@ -1,0 +1,22 @@
+.analyseButton {
+    margin-bottom: 4px;
+
+    background-color: #2d3443;
+    box-shadow: 0 4px 0 #252b37;
+    font-size: 1.1rem;
+
+    transform: translateY(0px);
+
+    transition: all 0.3s ease;
+}
+
+.analyseButton:hover {
+    filter: brightness(0.95) !important;
+}
+
+.analyseButton:active {
+    transform: translateY(4px);
+
+    box-shadow: 0 0 0 #252b37;
+    filter: brightness(0.85) !important;
+}

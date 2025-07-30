@@ -1,0 +1,36 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.wrapper a {
+    color: white;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    padding: 20px;
+    width: min(100%, 800px);
+
+    background-color: rgba(0, 0, 0, 0.15);
+    color: white;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    width: 100%;
+}
+
+.link {
+    text-decoration: underline;
+    cursor: pointer;
+}

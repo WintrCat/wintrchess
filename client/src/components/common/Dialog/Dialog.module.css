@@ -1,0 +1,32 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: default;
+}
+
+.menu {
+    position: relative;
+    box-sizing: border-box;
+
+    border-radius: 10px;
+    background-color: var(--ui-shade-3);
+}
+
+.closeButton {
+    padding: 5px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    background-color: var(--ui-shade-2);
+}

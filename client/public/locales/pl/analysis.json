@@ -1,0 +1,79 @@
+{
+    "title": "Raport z gry",
+    "settings": {
+        "title": "Ustawienia analizy"
+    },
+    "gameSelector": {
+        "sourceLabel": "Załaduj grę z",
+        "sourcePlaceholders": {
+            "pgn": "Wklej PGN...",
+            "fen": "Ciąg FEN...",
+            "chessCom": "Nazwa użytkownika Chess.com...",
+            "lichess": "Nazwa użytkownika Lichess..."
+        },
+        "searchGamesButton": "Poszukaj gier",
+        "uploadPGNButton": "Prześlij plik PGN",
+        "errors": {
+            "noGameSelected": "Musisz wybrać jakąś partię",
+            "invalidGame": "Nie udało się przetworzyć nieprawidłowej gry."
+        }
+    },
+    "gameSearchMenu": {
+        "title": "Wybierz partię",
+        "loading": "Wyszukiwanie gier...",
+        "loadingLong": "To zajmuje chwilę, proszę czekać...",
+        "userNotFound": "Nie mogliśmy znaleźć konta o tej nazwie użytkownika.",
+        "noGamesFound": "Nie mogliśmy znaleźć żadnych gier w wybranym miesiącu.",
+        "selectedToast": "Wybrano grę!"
+    },
+    "analyseButton": "Analizuj",
+    "stateTreeEditor": {
+        "moveContextMenu": {
+            "delete": "Usuń ruch",
+            "promote": "Promuj ruch"
+        },
+        "addNodePrompt": "Zagraj kilka ruchów..."
+    },
+    "stateTreeTraverser": {
+        "beginning": "Przejdź do początku",
+        "back": "Ostatni ruch",
+        "play": "Odtwórz",
+        "pause": "Zapauzuj",
+        "next": "Następny ruch",
+        "end": "Przejdź na koniec"
+    },
+    "progressReporter": {
+        "evaluating": "Ocenianie...",
+        "awaitingCaptcha": "Rozwiązywanie CAPTCHA...",
+        "classifying": "Klasyfikowanie...",
+        "evaluatingTooltip": "Jeśli to zajmuje trochę czasu, możesz spróbować obniżyć głębokość silnika w ustawieniach.",
+        "captchaTooltip": "To może potrwać kilka sekund...",
+        "captchaVerifyFailed": "Nie udało się zweryfikować CAPTCHA; spróbuj odświeżyć stronę.",
+        "captchaLoadFailed": "Nie udało się załadować CAPTCHA. Twoja przeglądarka jest prawdopodobnie nieaktualna.",
+        "captchaUnknownError": "Nieznany błąd CAPTCHA; spróbuj odświeżyć stronę.",
+        "completeNotification": "Analiza zakończona"
+    },
+    "analysisTabBar": {
+        "report": "Przegląd",
+        "analysis": "Analiza"
+    },
+    "accuraciesCard": {
+        "title": "Dokładność"
+    },
+    "classifiedMoveCard": {
+        "unknownError": "Klasyfikacja nie mogła zostać załadowana.",
+        "insufficientLines": "Upewnij się, że poprzedni ruch jest w pełni oceniany pod kątem klasyfikacji.",
+        "classifications": {
+            "brilliant": " to genialny ruch",
+            "best": "to najlepszy ruch",
+            "excellent": " to bardzo dobry ruch",
+            "okay": "to dobry ruch",
+            "inaccuracy": "to niedokładność",
+            "mistake": "to błąd",
+            "blunder": " to poważny błąd",
+            "forced": "jest wymuszone",
+            "theory": "to ruch książkowy",
+            "risky": "to ryzykowny pomysł"
+        }
+    }
+}

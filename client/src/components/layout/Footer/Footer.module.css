@@ -1,0 +1,44 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 60px;
+    padding: 15px;
+    box-sizing: border-box;
+    width: 100%;
+
+    background-color: var(--ui-shade-2);
+    color: white;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+}
+
+.section a {
+    color: white;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 60px;
+}
+
+.typographyIcon {
+    width: 30px;
+    height: 30px !important;
+}
+
+.typographyText {
+    font-size: 1.5rem;
+}
+
+.copyrightNotice {
+    font-size: 0.85rem;
+}
+
+.link {
+    text-decoration: underline;
+    cursor: pointer;
+}

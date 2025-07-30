@@ -1,0 +1,21 @@
+{
+    "boardAndPieces": {
+        "title": "Échiquier et pièces",
+        "boardColour": "Couleur de l'échiquier",
+        "lightSquareColour": "Cases blanches",
+        "darkSquareColour": "Cases Noires",
+        "presetsTitle": "Pré-réglages",
+        "presets": {
+            "wooden": "Bois",
+            "tournament": "Tournoi",
+            "blue": "Bleu",
+            "ice": "Glace",
+            "marshmallow": "Marshmallow"
+        }
+    },
+    "bugReporting": {
+        "title": "Signaler un Bug",
+        "bugReportingMode": "Mode de signalement de bug",
+        "bugReportingModeDescription": "Aidez-nous à trouver et à corriger les bugs. Le mode de rapport de bugs active un petit widget dans le coin inférieur de votre écran que vous pouvez cliquer pour copier les logs de la console."
+    }
+}

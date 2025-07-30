@@ -1,0 +1,11 @@
+.settingsField {
+    padding: 5px;
+    height: 30px;
+    box-sizing: border-box;
+
+    border: none;
+    border-radius: 10px;
+    background-color: var(--ui-shade-2);
+
+    color: white;
+}

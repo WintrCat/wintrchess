@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+    padding: 20px 0;
+
+    width: 100%;
+
+    overflow-x: hidden;
+}
+
+.advertisement {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 30px;
+}
+
+@media (max-width: 500px) {
+    .advertisement {
+        padding: 0;
+    }
+}

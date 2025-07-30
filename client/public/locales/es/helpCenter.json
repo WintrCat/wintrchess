@@ -1,0 +1,15 @@
+{
+    "title": "Centro de Ayuda",
+    "contact": {
+        "title": "Contáctenos",
+        "message": "Si necesita contactarnos, puede enviar un correo electrónico a:"
+    },
+    "analysis": {
+        "title": "Analizando una partida",
+        "part1": "Puedes analizar tus partidas de ajedrez en el",
+        "part2": "Página de Análisis de WintrChess",
+        "part3": "Las evaluaciones de Stockfish, los porcentajes de precisión y las clasificaciones de movimiento - para que usted pueda encontrar sus aciertos y errores - se proporcionan de forma gratuita. Encontrarás un tablero de análisis en el centro de la página, donde puedes ver los movimientos del juego que has seleccionado. Para seleccionar un juego, necesitas usar el selector de juego que hemos proporcionado en la barra lateral derecha. Se ve así:",
+        "part4": "Puedes cargar cualquier juego usando su PGN. Si lo deseas, también puedes seleccionar un juego de tu  cuenta de Chess.com o Lichess proporcionando tu nombre de usuario. Necesitarás hacer clic en el botón \"Buscar juegos\" para navegar por los juegos en tu cuenta, y puede seleccionar cualquiera simplemente haciendo clic en ellos. Por último, puede cargar una  posición FEN específica. En cualquier caso, podrás añadir movimientos manualmente después de importar un juego, que serán evaluados y clasificados sobre la marcha.",
+        "part5": "Después de seleccionar una partida, simplemente haga clic en el botón \"Analizar\" para comenzar el análisis. También puedes mover una pieza en el tablero si quieres empezar desde la posición inicial."
+    }
+}

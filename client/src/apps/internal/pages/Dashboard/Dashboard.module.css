@@ -1,0 +1,28 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    border: 1px solid var(--ui-shade-4);
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.tab {
+    padding: 10px;
+}

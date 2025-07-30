@@ -1,0 +1,15 @@
+{
+    "title": "Centre d'Aide",
+    "contact": {
+        "title": "Contactez-nous",
+        "message": "Si vous voulez nous contacter, vous pouvez envoyer un mail à l'adresse :"
+    },
+    "analysis": {
+        "title": "Analyser une partie",
+        "part1": "Vous pouvez analyser vos parties d'échecs sur la",
+        "part2": "Page d'analyse WintrChess",
+        "part3": "Évaluations de Stockfisch, pourcentage de précision et classification des coups - pour que vous puissiez trouver vos brillants coups et vos gaffes - sont donnés gratuitement. Vous trouverez un plateau d'analyse au milieu de la page, où vous pouvez voir les coups de la partie que vous avez sélectionné. Pour sélectionner une partie, vous devez utiliser le sélectionneur de partie situé à droite. Il ressemble à cela :",
+        "part4": "Vous pouvez entrer la partie de votre choix en utilisant son PGN. Si vous voulez, vous pouvez aussi sélectionner une partie depuis votre compte Chess.com ou Lichess.org en indiquant votre nom d'utilisateur. Vous devrez ensuite cliquer sur le bouton \"Chercher les parties\" pour parcourir les parties de votre compte, puis sélectionner l'une d'entre-elles en cliquant dessus. Enfin, vous pouvez entrer une position spécifique en utilisant son FEN. Dans tous les cas, vous pouvez ajouter des coups manuellement après avoir importé la partie, ce qui sera évalué et classifié à la volée.",
+        "part5": "Après avoir sélectionné une partie, cliquez sur le bouton \"Analyse\" pour commencer l'analyse. Vous pouvez aussi déplacer une pièce sur le plateau si vous voulez commencer à partir de la position de départ."
+    }
+}

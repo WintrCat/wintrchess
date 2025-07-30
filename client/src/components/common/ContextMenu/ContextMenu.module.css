@@ -1,0 +1,27 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    padding: 5px;
+    z-index: 100;
+
+    border-radius: 5px;
+    background-color: #242424;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+
+    border-radius: 5px;
+    color: white;
+    
+    cursor: default;
+    transition-duration: 0.3s;
+}
+
+.option:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}

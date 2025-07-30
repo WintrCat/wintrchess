@@ -1,0 +1,18 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    width: 140px;
+    height: 140px;
+
+    border: 2px solid var(--ui-shade-5);
+    border-radius: 10px;
+    
+    cursor: pointer;
+    overflow: hidden;
+    transition: border 0.3s ease;
+}
+
+.wrapper:hover {
+    border: 2px solid var(--ui-shade-7);
+}

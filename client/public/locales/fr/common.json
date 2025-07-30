@@ -1,0 +1,45 @@
+{
+    "loading": "Chargement...",
+    "back": "Retour",
+    "settings": "Paramètres",
+    "error": "Erreur",
+    "reset": "Réinitialiser",
+    "enabled": "Activé",
+    "disabled": "Désactivé",
+    "navigationBar": {
+        "support": "Aide",
+        "tooltips": {
+            "support": "Nous soutenir ❤",
+            "help": "Assistance"
+        }
+    },
+    "sidebar": {
+        "analysis": "Analyse",
+        "archive": "Archiver",
+        "news": "Actualités"
+    },
+    "confirmDialog": {
+        "yes": "Oui",
+        "no": "Non"
+    },
+    "gameListing": {
+        "gameResults": {
+            "unopinionated": {
+                "win": "Les Blancs ont gagné",
+                "draw": "Égalité",
+                "lose": "Les Noirs ont gagné",
+                "unknown": "Inconnu"
+            },
+            "opinionated": {
+                "win": "Victoire",
+                "draw": "Égalité",
+                "lose": "Défaite",
+                "unknown": "Inconnu"
+            }
+        }
+    },
+    "bugReportWidget": {
+        "tooltip": "Copier les logs de la console",
+        "toast": "Logs de la console copiés !"
+    }
+}

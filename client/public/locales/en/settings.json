@@ -1,0 +1,54 @@
+{
+    "account": {
+        "title": "Account",
+        "editProfile": {
+            "title": "Edit Profile",
+            "displayName": {
+                "message": "Enter a new display name."
+            },
+            "username": {
+                "message": "Enter a new username.",
+                "alreadyExists": "An account with this username already exists."
+            },
+            "email": {
+                "verification": "Enter a new email address. We'll send you an email to verify it.",
+                "verificationButton": {
+                    "unsent": "Send verification email",
+                    "sending": "Sending email...",
+                    "sent": "Verification email sent",
+                    "cooldown": "Please try again later."
+                },
+                "same": "You are already using this email address."
+            }
+        },
+        "manageAccount": {
+            "title": "Manage Account",
+            "resetPassword": "Reset Password",
+            "resetPasswordDialog": "We'll send you an email with a link which you can use to create a new password for your account.",
+            "deleteAccount": "Delete Account",
+            "deleteAccountDialog": "Please confirm the deletion of your account by typing the following into the field:",
+            "irreversibleAction": "Please remember that this action is irreversible."
+        }
+    },
+    "boardAndPieces": {
+        "title": "Board and Pieces",
+        "boardColour": "Board Colour",
+        "lightSquareColour": "Light Square Colour",
+        "darkSquareColour": "Dark Square Colour",
+        "presetsTitle": "Presets",
+        "presets": {
+            "wooden": "Wooden",
+            "tournament": "Tournament",
+            "blue": "Blue",
+            "ice": "Ice",
+            "marshmallow": "Marshmallow",
+            "pillow": "Pillow"
+        }
+    },
+    "bugReporting": {
+        "title": "Bug Reporting",
+        "bugReportingMode": "Bug Reporting Mode",
+        "bugReportingModeDescription": "Help us find and fix bugs. Bug Reporting Mode activates a small widget in the bottom corner of your screen which you can click to copy console logs."
+    },
+    "privacy": "Privacy"
+}

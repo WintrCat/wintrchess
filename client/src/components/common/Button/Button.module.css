@@ -1,0 +1,21 @@
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+
+    border: none;
+    border-radius: 10px;
+    background-color: var(--ui-shade-5);
+    color: white;
+    font-size: 1.1rem;
+
+    cursor: pointer;
+
+    transition: filter 0.3s ease;
+}
+
+.button:hover {
+    filter: brightness(0.9);
+}

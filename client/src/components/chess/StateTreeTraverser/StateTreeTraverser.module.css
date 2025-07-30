@@ -1,0 +1,32 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 5px;
+    z-index: 2;
+
+    background-color: #0f1114;
+}
+
+.wrapper img {
+    border-radius: 10px;
+    
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.wrapper img:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 350px) {
+    .wrapper img {
+        width: 30px !important;
+    }
+}
+
+.autoplayContainer {
+    display: flex;
+    align-items: center;
+}

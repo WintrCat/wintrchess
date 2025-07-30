@@ -1,0 +1,29 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+
+    border-radius: 10px;
+    background-color: var(--ui-shade-4);
+    color: white;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.progress {
+    width: 100%;
+}
+
+.tooltip {
+    width: 100%;
+
+    font-size: 0.8rem;
+    color: #d6d6d6;
+}

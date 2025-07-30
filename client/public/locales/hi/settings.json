@@ -1,0 +1,21 @@
+{
+    "boardAndPieces": {
+        "title": "बोर्ड और टुकड़े",
+        "boardColour": "बोर्ड का रंग",
+        "lightSquareColour": "हल्का रंग का चौकोर  ",
+        "darkSquareColour": "गहरे रंग का चौकोर",
+        "presetsTitle": "पूर्वनिर्धारित सेटिंग्स",
+        "presets": {
+            "wooden": "लकड़ी का",
+            "tournament": "प्रतियोगिता",
+            "blue": "नीला",
+            "ice": "बर्फ",
+            "marshmallow": "मार्शमैलो"
+        }
+    },
+    "bugReporting": {
+        "title": "एक गलती की रिपोर्टिंग",
+        "bugReportingMode": "रिपोर्टिंग एरर मोड",
+        "bugReportingModeDescription": "हमें गलियाँ ढूंढने और सुधारने में मदद करें। गलती रिपोर्टिंग मोड आपके स्क्रीन के निचले कोने में एक छोटा widget एक्टि्वेट करता है, जिसे आप क्लिक करके कंसोल लॉग्स कॉपी कर सकते हैं।"
+    }
+}

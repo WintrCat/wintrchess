@@ -1,0 +1,15 @@
+{
+    "title": "Central de Ajuda",
+    "contact": {
+        "title": "Contate-nos",
+        "message": "Se precisar entrar em contato conosco, pode enviar um e-mail para:"
+    },
+    "analysis": {
+        "title": "Analisando um jogo",
+        "part1": "Você pode analisar suas partidas de xadrez no",
+        "part2": "Página de análise WintrChess",
+        "part3": "As avaliações do Stockfish, as porcentagens de precisão e as classificações de movimentos - para que você possa encontrar os seus brilhantes e gafes - são fornecidos gratuitamente. Você encontrará um quadro de análise no centro da página, qual é onde você pode ver os movimentos do jogo que você selecionou. Para selecionar um jogo, você precisa usar o seletor de jogo que fornecemos na barra lateral da direita. Parece assim:",
+        "part4": "Você pode entrar em qualquer jogo usando o PGN. Se você quiser, você também pode selecionar um jogo da sua conta do Chess.com ou Lichess se você fornecer seu nome de usuário. Você precisará clicar no botão \"Pesquisar jogos\" para navegar pelos jogos na sua conta, e pode selecionar qualquer um deles apenas clicando sobre eles. Por último, você pode inserir uma única posição no FEN. De qualquer forma, você será capaz de adicionar movimentos manualmente após importar um jogo, que serão todos avaliados e classificados na mosca.",
+        "part5": "Após selecionar um jogo, basta clicar no botão \"Analisar\" para iniciar a análise. Também pode apenas mover uma peça no tabuleiro se quiser começar da posição inicial."
+    }
+}

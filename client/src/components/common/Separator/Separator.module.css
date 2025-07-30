@@ -1,0 +1,21 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.separator {
+    flex-grow: 1;
+
+    border: none;
+    border-bottom: 1px solid #2f2f2f;
+}
+
+.text {
+    margin: 0 5px;
+
+    color: #2f2f2f;
+    font-family: "Nunito";
+    text-transform: uppercase;
+}

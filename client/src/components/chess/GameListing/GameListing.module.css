@@ -1,0 +1,64 @@
+.gameListing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    min-width: min-content;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+
+    border-radius: 10px;
+    color: white;
+}
+
+.selector {
+    width: 18px;
+    height: 18px;
+}
+
+.clickableListing {
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.clickableListing:hover {
+    backdrop-filter: brightness(0.9);
+}
+
+.gameListing > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+
+    overflow-x: hidden;
+}
+
+.timeControlIcon {
+    width: 100%;
+}
+
+.playerProfile {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.usersColour {
+    aspect-ratio: 1 / 1;
+    height: 15px;
+
+    border-radius: 5px;
+}
+
+.playerTitle {
+    padding: 2px;
+
+    background-color: #b54040;
+    border-radius: 5px;
+}
+
+.copyButton {
+    background-color: var(--ui-shade-4);
+}

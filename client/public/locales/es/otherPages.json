@@ -1,0 +1,11 @@
+{
+    "news": {
+        "title": "Diario",
+        "titleDescription": "Obtén las últimas actualizaciones de la plataforma WintrChess",
+        "error": "Se produjo un error al cargar el periódico.",
+        "article": {
+            "unfound": "No hemos podido encontrar este artículo.",
+            "error": "Se ha producido un error al cargar este artículo."
+        }
+    }
+}

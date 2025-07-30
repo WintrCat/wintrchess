@@ -1,0 +1,21 @@
+{
+    "boardAndPieces": {
+        "title": "बोर्ड आणि तुकडे",
+        "boardColour": "बोर्डाचा रंग",
+        "lightSquareColour": "हलक्या रंगाचा चौक ",
+        "darkSquareColour": "गडद रंगाचा चौक",
+        "presetsTitle": "प्रेसेट्स",
+        "presets": {
+            "wooden": "लाकडी",
+            "tournament": "स्पर्धा",
+            "blue": "निळा",
+            "ice": "बर्फ",
+            "marshmallow": "मार्शमॅलो"
+        }
+    },
+    "bugReporting": {
+        "title": "चूक रिपोर्टिंग",
+        "bugReportingMode": "चूक रिपोर्टिंग मोड",
+        "bugReportingModeDescription": "बग शोधण्यात आणि दुरुस्त करण्यात आम्हाला मदत करा. बग रिपोर्टिंग मोड आपल्या स्क्रीनच्या खालच्या कोपऱ्यात एक लहान विजेट सक्रिय करते ज्यावर आपण कंसोल लॉगकॉपी करण्यासाठी क्लिक करू शकता."
+    }
+}

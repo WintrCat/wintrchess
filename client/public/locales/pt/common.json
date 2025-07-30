@@ -1,0 +1,41 @@
+{
+    "loading": "Carregando...",
+    "back": "Voltar",
+    "settings": "Configurações",
+    "error": "Erro",
+    "reset": "Restaurar",
+    "enabled": "Ativado",
+    "disabled": "Desativado",
+    "navigationBar": {
+        "support": "Suporte",
+        "tooltips": {
+            "support": "Nos apoie ❤️",
+            "help": "Central de Ajuda"
+        }
+    },
+    "sidebar": {
+        "analysis": "Análise",
+        "archive": "Arquivo",
+        "news": "Notícias"
+    },
+    "gameListing": {
+        "gameResults": {
+            "unopinionated": {
+                "win": "Brancas Vencem",
+                "draw": "Empate",
+                "lose": "Pretas Vencem",
+                "unknown": "Unknown"
+            },
+            "opinionated": {
+                "win": "Ganhou",
+                "draw": "Empate",
+                "lose": "Perdido",
+                "unknown": "Desconhecido"
+            }
+        }
+    },
+    "bugReportWidget": {
+        "tooltip": "Copiar Logs do Console",
+        "toast": "Registros dos Consoles Copiados!"
+    }
+}

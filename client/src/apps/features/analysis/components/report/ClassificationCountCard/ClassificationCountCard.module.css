@@ -1,0 +1,47 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+
+    border-radius: 10px;
+    background-color: var(--ui-shade-4);
+}
+
+.username {
+    text-align: center;
+    max-width: 110px;
+    box-sizing: border-box;
+    padding: 0 5px;
+
+    color: white;
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 0.8rem;
+
+    overflow-wrap: break-word;
+}
+
+.classificationTable {
+    text-align: center;
+    table-layout: auto;
+    border-collapse: collapse;
+}
+
+.classificationTable td {
+    padding: 0;
+}
+
+.classificationNameCell {
+    width: 100px;
+    text-align: left;
+
+    overflow-wrap: break-word;
+}
+
+.classificationCountCell {
+    width: 60px;
+
+    font-family: "Nunito";
+    font-weight: 700;
+}

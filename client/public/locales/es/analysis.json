@@ -1,0 +1,79 @@
+{
+    "title": "Informe de la Partida",
+    "settings": {
+        "title": "Configuración de Análisis"
+    },
+    "gameSelector": {
+        "sourceLabel": "Cargar partida desde",
+        "sourcePlaceholders": {
+            "pgn": "Pegar PGN...",
+            "fen": "Notación FEN...",
+            "chessCom": "Nombre de usuario de Chess.com",
+            "lichess": "Nombre de usuario de Lichess. com..."
+        },
+        "searchGamesButton": "Buscar Partida",
+        "uploadPGNButton": "Subir Archivo PGN",
+        "errors": {
+            "noGameSelected": "Por favor, selecciona una partida de Ajedrez.",
+            "invalidGame": "Error al analizar juego inválido."
+        }
+    },
+    "gameSearchMenu": {
+        "title": "Selecciona una partida",
+        "loading": "Buscando partidas...",
+        "loadingLong": "Esto está tomando un tiempo, por favor espere...",
+        "userNotFound": "No pudimos encontrar una cuenta con este usuario.",
+        "noGamesFound": "No pudimos encontrar ninguna partida para este mes.",
+        "selectedToast": "¡Partida seleccionada!"
+    },
+    "analyseButton": "Analizar",
+    "stateTreeEditor": {
+        "moveContextMenu": {
+            "delete": "Eliminar movimiento",
+            "promote": "Promover movimiento"
+        },
+        "addNodePrompt": "Reproducir algunos movimientos..."
+    },
+    "stateTreeTraverser": {
+        "beginning": "Ir al inicio",
+        "back": "Última jugada",
+        "play": "Jugar",
+        "pause": "Pausa",
+        "next": "Siguiente jugada",
+        "end": "Ir al final"
+    },
+    "progressReporter": {
+        "evaluating": "Evaluando...",
+        "awaitingCaptcha": "Resolviendo el CAPTCHA...",
+        "classifying": "Clasificando...",
+        "evaluatingTooltip": "Si esto lleva un tiempo, puede intentar bajar la profundidad del motor en la configuración.",
+        "captchaTooltip": "Esto podría tomar algunos segundos.",
+        "captchaVerifyFailed": "No se pudo verificar el CAPTCHA; intente actualizar la página.",
+        "captchaLoadFailed": "No se pudo cargar el CAPTCHA. Su navegador probablemente esté desactualizado.",
+        "captchaUnknownError": "Error de CAPTCHA desconocido; intente actualizar la página.",
+        "completeNotification": "Análisis Completo"
+    },
+    "analysisTabBar": {
+        "report": "Informe",
+        "analysis": "Análisis"
+    },
+    "accuraciesCard": {
+        "title": "Precisiones"
+    },
+    "classifiedMoveCard": {
+        "unknownError": "No se ha podido cargar la clasificación.",
+        "insufficientLines": "Asegúrese de que la jugada anterior sea evaluada completamente para una clasificación.",
+        "classifications": {
+            "brilliant": " es brillante",
+            "best": "es la mejor jugada",
+            "excellent": "Es excelente",
+            "okay": "es una jugada correcta",
+            "inaccuracy": " es una imprecisión",
+            "mistake": " es un error",
+            "blunder": " es un error grave",
+            "forced": " es forzado",
+            "theory": "es teórica",
+            "risky": "es una idea arriesgada"
+        }
+    }
+}

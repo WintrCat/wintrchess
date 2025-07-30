@@ -1,0 +1,23 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    padding: 5px 50px;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+    min-height: 50px;
+    
+    background-color: var(--ui-shade-3);
+    color: white;
+}
+
+.closeButton {
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    right: 5px;
+}

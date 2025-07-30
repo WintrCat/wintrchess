@@ -1,0 +1,21 @@
+{
+    "boardAndPieces": {
+        "title": "Tabuleiro e Peças",
+        "boardColour": "Cor do tabuleiro",
+        "lightSquareColour": "Cor do quadrado claro",
+        "darkSquareColour": "Cor do quadrado escuro",
+        "presetsTitle": "Predefinições",
+        "presets": {
+            "wooden": "Madeira",
+            "tournament": "Torneio",
+            "blue": "Azul",
+            "ice": "Gelo",
+            "marshmallow": "Marshmallow"
+        }
+    },
+    "bugReporting": {
+        "title": "Relatar erro",
+        "bugReportingMode": "Modo Relatório de Erro",
+        "bugReportingModeDescription": "Ajude-nos a encontrar e corrigir erros. O Modo Relatório de Erro ativa um pequeno widget no canto inferior da sua tela em que você pode clicar para copiar os logs do console."
+    }
+}

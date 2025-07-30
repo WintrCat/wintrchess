@@ -1,0 +1,22 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 3px 10px;
+    box-sizing: border-box;
+    min-height: 38px;
+
+    border-radius: 10px;
+    border: 1px solid var(--ui-shade-4);
+    background-color: var(--ui-shade-3);
+
+    transition: border-color 0.3s ease;
+}
+
+.wrapper:hover {
+    border-color: var(--ui-blue);
+}
+
+.username {
+    color: white;
+}

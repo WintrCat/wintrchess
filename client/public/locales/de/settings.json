@@ -1,0 +1,21 @@
+{
+    "boardAndPieces": {
+        "title": "Brett und Figuren",
+        "boardColour": "Brettfarbe",
+        "lightSquareColour": "Feldfarbe hell",
+        "darkSquareColour": "Feldfarbe dunkel",
+        "presetsTitle": "Voreinstellungen",
+        "presets": {
+            "wooden": "Hölzern",
+            "tournament": "Turnier",
+            "blue": "Blau",
+            "ice": "Eis",
+            "marshmallow": "Marshmallow"
+        }
+    },
+    "bugReporting": {
+        "title": "Fehler melden",
+        "bugReportingMode": "Fehlermeldungsmodus",
+        "bugReportingModeDescription": "Hilf uns Fehler zu finden und zu beheben. Fehlermeldungsmodus aktiviert ein kleines Symbol in der unteren Ecke des Bildschirms, das du anklicken kannst, um die Protokolle der Konsole zu kopieren."
+    }
+}

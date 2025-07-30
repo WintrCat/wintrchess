@@ -1,0 +1,116 @@
+{
+    "title": "Spielbericht",
+    "settings": {
+        "title": "Analyse Einstellungen",
+        "engine": {
+            "descriptions": {
+                "version": "Die Schach-Engine, die deine Züge analysieren wird.",
+                "depth": "Die Anzahl der Züge, die die Engine vorausberechnet, wenn sie Züge analysieren.",
+                "lines": "Die Anzahl der Varianten, die von der Engine vorgeschlagen werden. Für einige Klassifizierungen müssen es mindestens 2 sein.",
+                "timeLimit": "Die maximale Zeit, die für die Analyse eines Zuges von der Engine verwendet werden soll.",
+                "suggestionArrows": {
+                    "disabled": "Deaktiviert: Engine-Pfeile für den besten Zug nicht anzeigen",
+                    "continuation": "Beste Fortsetzung: Pfeil für den besten Zug anzeigen",
+                    "alternative": "Beste Alternative: Pfeil für den besten Zug in der vorherigen Position anzeigen"
+                }
+            },
+            "title": "Engine",
+            "version": "Version",
+            "depth": "Tiefe",
+            "lines": "Anzahl der Varianten",
+            "timeLimit": "Zeitbegrenzung (Sekunden)"
+        },
+        "classifications": {
+            "title": "Klassifizierungen",
+            "hide": "Klassifizierungen ausblenden",
+            "brilliant": "Brillant",
+            "theory": "Theorie"
+        },
+        "other": {
+            "title": "Sonstiges",
+            "simpleNotation": "Einfache Zugnotationen",
+            "descriptions": {
+                "simpleNotation": "Zeigt einfache Beschreibungen der Züge, statt der Standardnotation. Beispiel: Kxf4 -> König auf e3 schlägt f4"
+            }
+        }
+    },
+    "gameSelector": {
+        "sourceLabel": "Lade Spiel von",
+        "sourcePlaceholders": {
+            "pgn": "Füge PGN ein...",
+            "fen": "FEN-Zeichenkette...",
+            "chessCom": "Chess.com Benutzername...",
+            "lichess": "Lichess Benutzername..."
+        },
+        "searchGamesButton": "Suche Partien",
+        "uploadPGNButton": "PGN Datei importieren",
+        "statusMessages": {
+            "fetchingLatest": "Lädt die letzte Partie..."
+        },
+        "errors": {
+            "noGameSelected": "Bitte wähle eine Schachpartie aus.",
+            "invalidGame": "Fehler beim Parsen, das Spiel ist ungültig."
+        }
+    },
+    "gameSearchMenu": {
+        "title": "Wähle eine Partie aus",
+        "loading": "Suche nach Partien...",
+        "loadingLong": "Es dauert eine Weile, bitte warte...",
+        "userNotFound": "Wir konnten kein Konto mit diesem Benutzernamen finden.",
+        "noGamesFound": "Wir konnten keine Partien für diesen Monat finden.",
+        "unknownError": "Unbekannter Fehler beim Suchen der Partien.",
+        "selectedToast": "Spiel ausgewählt!"
+    },
+    "analyseButton": "Analysiere",
+    "analysisError": "Analyse fehlgeschlagen; Ihr Gerät oder Browser könnte veraltet sein.",
+    "stateTreeEditor": {
+        "moveContextMenu": {
+            "delete": "Zug löschen",
+            "promote": "Variante aufwerten"
+        },
+        "addNodePrompt": "Führe ein paar Züge aus..."
+    },
+    "stateTreeTraverser": {
+        "beginning": "Zum Start gehen",
+        "back": "Letzter Zug",
+        "play": "Spielen",
+        "pause": "Pausieren",
+        "next": "Nächster Zug",
+        "end": "Gehe zum Ende"
+    },
+    "progressReporter": {
+        "evaluating": "Wird ausgewertet...",
+        "awaitingCaptcha": "CAPTCHA wird gelöst...",
+        "classifying": "Klassifiziert...",
+        "evaluatingTooltip": "Wenn es eine Weile dauert, kannst du versuchen, die Rechentiefe in den Einstellungen zu senken.",
+        "captchaTooltip": "Dies kann einige Sekunden dauern...",
+        "captchaVerifyFailed": "CAPTCHA konnte nicht verifiziert werden; versuche die Seite zu aktualisieren.",
+        "captchaLoadFailed": "CAPTCHA konnte nicht geladen werden. Dein Browser ist vermutlich veraltet.",
+        "captchaUnknownError": "Unbekannter CAPTCHA-Fehler; versuche die Seite neu zu laden.",
+        "completeNotification": "Analyse abgeschlossen"
+    },
+    "analysisTabBar": {
+        "report": "Bericht",
+        "analysis": "Analyse"
+    },
+    "accuraciesCard": {
+        "title": "Genauigkeiten"
+    },
+    "classifiedMoveCard": {
+        "unknownError": "Eine Klassifizierung konnte nicht geladen werden.",
+        "insufficientLines": "Stelle sicher, dass der vorherige Zug vollständig auf eine Klassifizierung überprüft wird.",
+        "classifications": {
+            "brilliant": "ist Brillant",
+            "best": "ist der beste Zug",
+            "excellent": "ist Exzellent",
+            "okay": "ist okay",
+            "inaccuracy": "ist eine Ungenauigkeit",
+            "mistake": "ist ein Fehler",
+            "blunder": "ist ein Patzer",
+            "forced": "ist erzwungen",
+            "theory": "ist Theorie",
+            "risky": "ist eine riskante Idee"
+        },
+        "alternative": "Der beste Zug war"
+    }
+}

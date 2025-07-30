@@ -1,0 +1,7 @@
+.optionDefault:hover {
+    background-color: var(--ui-shade-3);
+}
+
+.optionDefault:active {
+    background-color: var(--ui-blue) !important;
+}

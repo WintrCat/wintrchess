@@ -1,0 +1,41 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-bottom: 10px;
+
+    border-radius: 10px;
+    background-color: var(--ui-shade-4);
+}
+
+.accuraciesTitle {
+    padding: 5px 5px 0 5px;
+    text-align: center;
+
+    font-size: 1.4rem;
+    color: white;
+}
+
+.accuracies {
+    display: flex;
+    align-items: center;
+}
+
+.accuracy {
+    padding: 5px;
+    width: 50%;
+    box-sizing: border-box;
+    text-align: center;
+
+    font-size: 1.5rem;
+}
+
+.whiteAccuracy {
+    background-color: whitesmoke;
+    color: #0a0a0a;
+}
+
+.blackAccuracy {
+    background-color: #0a0a0a;
+    color: whitesmoke;
+}

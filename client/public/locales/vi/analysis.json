@@ -1,0 +1,142 @@
+{
+    "title": "Báo cáo ván đấu",
+    "settings": {
+        "title": "Cài đặt Phân tích",
+        "engine": {
+            "descriptions": {
+                "version": "Phầm mềm cờ vua sẽ được dùng để phân tích nước cờ của bạn.",
+                "depth": "Số nước mà phần mềm cờ sẽ tính toán khi phân tích các nước đi.",
+                "lines": "Số biến thể mà phần mềm cờ sẽ kiểm tra. Số biến thể ít nhất phải là 2 cho một số phân loại nước cờ.",
+                "timeLimit": "Thời gian lớn nhất mà phần mềm cờ được dùng để phân tích một nước cờ.",
+                "suggestionArrows": {
+                    "disabled": "Tắt: Không hiển thị mũi tên của phần mềm cờ",
+                    "continuation": "Nước đi tốt nhất để tiếp tục: Hiển thị một mũi tên cho nước đi tốt nhất trong thế cờ này",
+                    "alternative": "Nước đi tốt nhất thay thế: Hiển thị một mũi tên cho nước đi tốt nhất trong thế cờ trước"
+                }
+            },
+            "title": "Phần mềm cờ",
+            "version": "Phiên bản",
+            "depth": "Số nước đi tính toán",
+            "lines": "Số biến thể",
+            "linesWarning": "Ít nhất 2 biến thể phải được bật cho các nước đi mạnh và một số nước đi rất mạnh.",
+            "timeLimit": "Giới hạn thời gian (tính theo giây)",
+            "suggestionArrows": {
+                "title": "Mũi tên gợi ý",
+                "continuation": "Nước đi nối tiếp tốt nhất",
+                "alternative": "Nước đi thay thế tốt nhất"
+            }
+        },
+        "classifications": {
+            "title": "Phân loại",
+            "hide": "Ẩn phân loại nước đi",
+            "brilliant": "Nước đi rất mạnh",
+            "theory": "Nước đi lý thuyết"
+        },
+        "other": {
+            "title": "Khác",
+            "simpleNotation": "Ký hiệu cờ vua đơn giản",
+            "descriptions": {
+                "simpleNotation": "Hiển thị các miêu tả đơn giản của các nước đi cờ vua thay vì các ký hiệu cờ vua đại chúng. VD: Vxf4 -> Vua từ e3 ăn f4"
+            }
+        }
+    },
+    "gameSelector": {
+        "sourceLabel": "Tải ván đấu từ",
+        "sourcePlaceholders": {
+            "pgn": "Dán PGN...",
+            "fen": "Chuỗi FEN...",
+            "chessCom": "Tên tài khoản chess.com...",
+            "lichess": "Tên tài khoản Lichess..."
+        },
+        "searchGamesButton": "Tìm ván đấu",
+        "uploadPGNButton": "Tải file PGN",
+        "statusMessages": {
+            "fetchingLatest": "Đang tải trò chơi mới nhất..."
+        },
+        "errors": {
+            "noGameSelected": "Vui lòng chọn một ván đấu.",
+            "invalidGame": "Không thể phân tích cú pháp ván đấu không hợp lệ."
+        }
+    },
+    "gameSearchMenu": {
+        "title": "Chọn một ván đấu",
+        "loading": "Đang tìm các ván đấu...",
+        "loadingLong": "Việc này sẽ mất thời gian một chút, xin hãy đợi...",
+        "userNotFound": "Chúng tôi không tìm được tài khoản nào với tên này.",
+        "noGamesFound": "Chúng tôi không tìm được ván nào trong tháng này.",
+        "unknownError": "Có một lỗi đã xảy ra trong khi đang tìm các trò chơi.",
+        "selectedToast": "Đã chọn ván đấu!"
+    },
+    "analyseButton": "Phân tích",
+    "analysisError": "Không thể phân tích ván cờ; thiết bị hoặc trình duyệt của bạn có thể bị lỗi thời.",
+    "realtimeEngine": {
+        "depth": "Số nước đi đã tính toán:",
+        "checkmate": "Chiếu hết",
+        "error": "Không thể đánh giá nước đi."
+    },
+    "stateTreeEditor": {
+        "moveContextMenu": {
+            "delete": "Xóa nước đi",
+            "promote": "Đưa lên làm nước đi chính"
+        },
+        "addNodePrompt": "Hãy đi một vài nước..."
+    },
+    "stateTreeTraverser": {
+        "beginning": "Đến đầu ván đấu",
+        "back": "Đến nước đi cuối cùng",
+        "play": "Chơi",
+        "pause": "Tạm dừng",
+        "next": "Nước tiếp theo",
+        "end": "Đến cuối"
+    },
+    "progressReporter": {
+        "evaluating": "Đang đánh giá...",
+        "awaitingCaptcha": "Đang giải CAPTCHA...",
+        "classifying": "Đang phân loại nước đi...",
+        "evaluatingTooltip": "Nếu việc này tốn nhiều thời gian, bạn có thể giảm độ sâu của máy trong cài đặt.",
+        "captchaTooltip": "Việc này có thể tốn vài giây...",
+        "captchaVerifyFailed": "Không thể xác minh CAPTCHA; hãy thử tải lại trang.",
+        "captchaLoadFailed": "Không thể tại CAPTCHA. Trình duyệt của bạn có thể đã lỗi thời.",
+        "captchaUnknownError": "Lỗi CAPTCHA không rõ; hãy thử tải lại trang.",
+        "reportFailed": "Có một vấn đề đã xảy ra trong khi đang tạo ra báo cáo ván cờ; hảy thử tải lại trang.",
+        "completeNotification": "Phân tích hoàn tất"
+    },
+    "analysisTabBar": {
+        "report": "Báo cáo",
+        "analysis": "Phân tích"
+    },
+    "accuraciesCard": {
+        "title": "Độ chính xác"
+    },
+    "classifiedMoveCard": {
+        "unknownError": "Không thể tải phân loại nước đi.",
+        "insufficientLines": "Chắc chắn rằng nước đi vừa rồi được đánh giá đầy đủ cho việc phân loại.",
+        "classifications": {
+            "brilliant": "là nước đi thiên tài",
+            "critical": "là nước đi tốt duy nhất",
+            "best": "là nước đi tốt nhất",
+            "excellent": "là nước đi xuất sắc",
+            "okay": "là nước đi ổn",
+            "inaccuracy": "là nước đi không chuẩn",
+            "mistake": "là nước đi sai lầm",
+            "blunder": "là nước đi ngớ ngẩn",
+            "forced": "là nước đi bắt buộc",
+            "theory": "là nước đi lý thuyết",
+            "risky": "là một ý định nguy hiểm"
+        },
+        "alternative": "Nước đi tốt nhất là"
+    },
+    "classifications": {
+        "brilliant": "Nước đi rất mạnh",
+        "critical": "Nước đi mạnh",
+        "best": "Nước đi tốt nhất",
+        "excellent": "Nước đi tốt",
+        "okay": "Nước đi khá",
+        "inaccuracy": "Nước đi không chính xác",
+        "mistake": "Nước đi yếu",
+        "blunder": "Nước đi sai lầm nghiêm trọng",
+        "forced": "Nước bắt buộc",
+        "theory": "Nước đi lý thuyết",
+        "risky": "Nước đi táo bạo"
+    }
+}

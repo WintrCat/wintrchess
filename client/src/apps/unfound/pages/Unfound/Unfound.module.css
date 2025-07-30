@@ -1,0 +1,29 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    box-sizing: border-box;
+    padding: 30px;
+    width: 100%;
+
+    color: white;
+}
+
+.errorCode {
+    margin: 0;
+
+    font-size: 4rem;
+}
+
+.image {
+    width: min(500px, 100%);
+
+    border-radius: 20px;
+}
+
+.returnLink {
+    color: white;
+}

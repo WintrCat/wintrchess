@@ -1,0 +1,39 @@
+{
+    "loading": "लोड होत आहे...",
+    "back": "परत जा",
+    "settings": "सेटिंग्स",
+    "error": "काहीतरी चूक झाली",
+    "reset": "रीसेट करा",
+    "navigationBar": {
+        "support": "मदत",
+        "tooltips": {
+            "support": "आमचं समर्थन करा",
+            "help": "मदत केंद्र"
+        }
+    },
+    "sidebar": {
+        "analysis": "विश्लेषण",
+        "archive": "संग्रह",
+        "news": "बातमी"
+    },
+    "gameListing": {
+        "gameResults": {
+            "unopinionated": {
+                "win": "व्हाईट जिंकला",
+                "draw": "बांधलेले",
+                "lose": "ब्लॅक जिंकला",
+                "unknown": "अज्ञात"
+            },
+            "opinionated": {
+                "win": "जिंकले",
+                "draw": "बांधलेले",
+                "lose": "हरवले",
+                "unknown": "अज्ञात"
+            }
+        }
+    },
+    "bugReportWidget": {
+        "tooltip": "कंसोल लॉग कॉपी करा",
+        "toast": "कन्सोल लॉग्स कॉपी झालेत!"
+    }
+}

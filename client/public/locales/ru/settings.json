@@ -1,0 +1,21 @@
+{
+    "boardAndPieces": {
+        "title": "Доска и фигуры",
+        "boardColour": "Цвет доски",
+        "lightSquareColour": "Цвет светлого поля",
+        "darkSquareColour": "Цвет тёмного поля",
+        "presetsTitle": "Шаблоны",
+        "presets": {
+            "wooden": "Деревянный",
+            "tournament": "Турнир",
+            "blue": "Синий",
+            "ice": "Лёд",
+            "marshmallow": "Зефир"
+        }
+    },
+    "bugReporting": {
+        "title": "Сообщение об ошибке",
+        "bugReportingMode": "Режим отчетов об ошибках",
+        "bugReportingModeDescription": "Помогите нам найти и исправить ошибки. Режим отчетности об ошибках активирует небольшой виджет в нижнем углу экрана, который вы можете нажать для копирования журналов консоли."
+    }
+}

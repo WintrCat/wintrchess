@@ -1,0 +1,7 @@
+.indent {
+    display: flex;
+    width: 2px;
+    height: 32px;
+    
+    background-color: gray;
+}

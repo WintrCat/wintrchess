@@ -1,0 +1,116 @@
+{
+    "title": "Relatório da Partida",
+    "settings": {
+        "title": "Configurações de análise",
+        "engine": {
+            "descriptions": {
+                "version": "O motor de xadrez que vai analisar os seus movimentos.",
+                "depth": "O número de movimentos que o motor olhará no futuro quando analisa os movimentos.",
+                "lines": "O número de linhas que o motor vai considerar. Deve ser de pelo menos 2 para algumas classificações.",
+                "timeLimit": "O tempo máximo que o motor pode analisar um movimento.",
+                "suggestionArrows": {
+                    "disabled": "Desativado: Não mostrar setas do motor",
+                    "continuation": "Melhor Continuação: Mostra uma seta para o melhor lance na posição atual.",
+                    "alternative": "Melhor Alternativa: Mostra uma seta para o melhor lance na posição anterior"
+                }
+            },
+            "title": "Motor",
+            "version": "Versão",
+            "depth": "Profundidade",
+            "lines": "Número de linhas",
+            "timeLimit": "Limite de Tempo (segundos)"
+        },
+        "classifications": {
+            "title": "Classificações",
+            "hide": "Ocultar Classificações",
+            "brilliant": "Brilhante",
+            "theory": "Livro"
+        },
+        "other": {
+            "title": "Outros",
+            "simpleNotation": "Notação simples de movimentos",
+            "descriptions": {
+                "simpleNotation": "Mostra descrições simples dos movimentos de xadrez ao invés da notação padrão. Exemplo Kxf4 -> Rei em e3 captura f4"
+            }
+        }
+    },
+    "gameSelector": {
+        "sourceLabel": "Carregar jogo de",
+        "sourcePlaceholders": {
+            "pgn": "Colar PGN...",
+            "fen": "String FEN...",
+            "chessCom": "Nome de usuário Chess.com...",
+            "lichess": "Nome de usuário Lichess..."
+        },
+        "searchGamesButton": "Pesquisar Jogos",
+        "uploadPGNButton": "Carregar arquivo PGN",
+        "statusMessages": {
+            "fetchingLatest": "Carregando o jogo mais recente..."
+        },
+        "errors": {
+            "noGameSelected": "Por favor, selecione um jogo de xadrez.",
+            "invalidGame": "Falha ao analisar jogo inválido."
+        }
+    },
+    "gameSearchMenu": {
+        "title": "Escolha um jogo",
+        "loading": "Procurando jogos...",
+        "loadingLong": "Isto está demorando um pouco, por favor, aguarde...",
+        "userNotFound": "Não foi possível encontrar uma conta com esse nome de usuário",
+        "noGamesFound": "Não foi possível encontrar jogos para este mês.",
+        "unknownError": "Erro desconhecido enquanto procurava jogos.",
+        "selectedToast": "Jogo selecionado!"
+    },
+    "analyseButton": "Analisar",
+    "analysisError": "A análise falhou; seu dispositivo ou navegador pode estar desatualizado.",
+    "stateTreeEditor": {
+        "moveContextMenu": {
+            "delete": "Remover o Lance",
+            "promote": "Promover lance"
+        },
+        "addNodePrompt": "Jogue alguns movimentos..."
+    },
+    "stateTreeTraverser": {
+        "beginning": "Ir para o início",
+        "back": "Último movimento",
+        "play": "Reproduzir",
+        "pause": "Pausar",
+        "next": "Próximo lance",
+        "end": "Ir para o fim"
+    },
+    "progressReporter": {
+        "evaluating": "Avaliando...",
+        "awaitingCaptcha": "Resolvendo o CAPTCHA...",
+        "classifying": "Classificando...",
+        "evaluatingTooltip": "Se isso demorar um pouco, tente reduzir a profundidade do motor nas configurações.",
+        "captchaTooltip": "Isto pode demorar alguns segundos...",
+        "captchaVerifyFailed": "Não foi possível verificar o CAPTCHA; tente atualizar a página.",
+        "captchaLoadFailed": "Não foi possível carregar o CAPTCHA. Seu navegador provavelmente está desatualizado.",
+        "captchaUnknownError": "Erro CAPTCHA desconhecido; tente atualizar a página.",
+        "completeNotification": "Análise completa"
+    },
+    "analysisTabBar": {
+        "report": "Relatório",
+        "analysis": "Análise"
+    },
+    "accuraciesCard": {
+        "title": "Precisões"
+    },
+    "classifiedMoveCard": {
+        "unknownError": "A classificação não pode ser carregada.",
+        "insufficientLines": "Certifique-se de que o movimento anterior foi totalmente avaliado para uma classificação.",
+        "classifications": {
+            "brilliant": " é brilhante",
+            "best": "é o melhor lance",
+            "excellent": "é excelente",
+            "okay": "é um lance okay",
+            "inaccuracy": "é uma imprecisão",
+            "mistake": "é um erro",
+            "blunder": "é uma gafe",
+            "forced": " é forçado",
+            "theory": "é um lance de livro",
+            "risky": "é uma ideia arriscada"
+        },
+        "alternative": "O melhor lance era"
+    }
+}

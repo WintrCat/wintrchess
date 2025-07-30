@@ -1,0 +1,41 @@
+@keyframes pulse {
+    0% {
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+
+    50% {
+        background-color: rgba(26, 26, 26, 0.15);
+    }
+
+    100% {
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+}
+
+.skeletonLine {
+    display: flex;
+    gap: 10px;
+}
+
+.evaluation {
+    width: 40px;
+    height: 25px;
+
+    border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.lineMoves {
+    flex-grow: 1;
+    height: 25px;
+
+    border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.pulsing {
+    animation-name: pulse;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}

@@ -1,0 +1,11 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.selectorButton {
+    padding: 5px;
+    
+    background-color: var(--ui-shade-2);
+}

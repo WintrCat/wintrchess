@@ -1,0 +1,26 @@
+.sidebarTab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    min-height: 50px;
+    padding: 10px 5px;
+    
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+
+    word-break: break-all;
+    color: white;
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 1rem;
+
+    cursor: pointer;
+    
+    transition: background-color 0.3s ease;
+}
+
+.sidebarTab:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}

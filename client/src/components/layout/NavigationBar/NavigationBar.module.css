@@ -1,0 +1,119 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 65px;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+
+    background-color: var(--ui-shade-2);
+    color: white;
+
+    overflow-x: auto;
+}
+
+.wrapper::-webkit-scrollbar {
+    height: 5px;
+}
+
+.menuButton {
+    display: none;
+
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.menuButton:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 800px) {
+    .menuButton {
+        display: block;
+    }
+}
+
+@media (max-width: 1000px) {
+    .typographyText {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .typographyText {
+        display: flex;
+    }
+}
+
+@media (max-width: 700px) {
+    .typographyText {
+        display: none;
+    }
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    height: 100%;
+}
+
+.tabs {
+    display: flex;
+    flex-shrink: 0;
+    margin-left: 5px;
+    max-width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 800px) {
+    .tabs {
+        display: none;
+    }
+}
+
+.support {
+    background: linear-gradient(
+        -225deg, #22e1FF 0%, #1d8fe1 48%, #625eb1 100%
+    );
+}
+
+.signIn {
+    gap: 5px;
+    padding: 7px;
+    padding-right: 10px;
+
+    font-family: "Nunito";    
+}
+
+.settings {
+    padding: 7px;
+    
+    background-color: var(--ui-shade-2);
+}
+
+.profileMenu {
+    padding: 0 5px;
+
+    user-select: none;
+}
+
+@media (max-width: 450px) {
+    .profileMenu > span {
+        display: none;
+    }
+}
+
+.profileImage {
+    height: 42px;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 50%;
+    background-color: aquamarine;
+}

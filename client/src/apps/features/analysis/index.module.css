@@ -1,0 +1,15 @@
+.wrapper {
+    overflow-x: clip;
+}
+
+@media (max-width: 900px) {
+    .footer {
+        padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 350px) {
+    .footer {
+        padding-bottom: 60px;
+    }
+}

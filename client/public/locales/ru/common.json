@@ -1,0 +1,45 @@
+{
+    "loading": "Загрузка...",
+    "back": "Назад",
+    "settings": "Настройки",
+    "error": "Ошибка",
+    "reset": "Сброс",
+    "enabled": "Включено",
+    "disabled": "Отключено",
+    "navigationBar": {
+        "support": "Поддержка",
+        "tooltips": {
+            "support": "Поддержите нас ❤️",
+            "help": "Центр помощи"
+        }
+    },
+    "sidebar": {
+        "analysis": "Анализ",
+        "archive": "Архивировать",
+        "news": "Новости"
+    },
+    "confirmDialog": {
+        "yes": "Да",
+        "no": "Нет"
+    },
+    "gameListing": {
+        "gameResults": {
+            "unopinionated": {
+                "win": "Белые победили",
+                "draw": "Ничья",
+                "lose": "Черные победили",
+                "unknown": "Неизвестно"
+            },
+            "opinionated": {
+                "win": "Победа",
+                "draw": "Ничья",
+                "lose": "Поражение",
+                "unknown": "Неизвестно"
+            }
+        }
+    },
+    "bugReportWidget": {
+        "tooltip": "Копировать консольные логи",
+        "toast": "Журнал консоли скопирован!"
+    }
+}

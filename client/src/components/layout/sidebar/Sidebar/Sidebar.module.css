@@ -1,0 +1,58 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 100vh;
+    z-index: 1000;
+
+    background-color: var(--ui-shade-3);
+    color: white;
+    
+    overflow-y: auto;
+}
+
+.titleSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.closeButton {
+    width: 50px;
+
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.05);
+
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.closeButton:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+    height: 100%;
+}
+
+.tabSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

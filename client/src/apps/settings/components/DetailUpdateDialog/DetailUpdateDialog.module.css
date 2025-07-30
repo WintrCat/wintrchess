@@ -1,0 +1,28 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    padding: 25px;
+    width: min(500px, 100%);
+}
+
+.message {
+    padding-right: 60px;
+}
+
+.error {
+    border-radius: 5px;
+}
+
+.confirmButtonContainer {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+.confirmButton {
+    width: min(225px, 100%);
+
+    overflow-wrap: anywhere;
+}

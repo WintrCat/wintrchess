@@ -1,0 +1,15 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.title {
+    display: flex;
+    align-items: end;
+
+    color: white;
+    font-family: "JetBrains Mono";
+    font-size: 2rem;
+    letter-spacing: -2px;
+}

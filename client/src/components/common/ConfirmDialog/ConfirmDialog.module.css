@@ -1,0 +1,14 @@
+.dialog {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 55px 15px 15px 15px;
+    width: min(400px, 90%);
+}
+
+.options {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}

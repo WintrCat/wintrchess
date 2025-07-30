@@ -1,0 +1,15 @@
+{
+    "title": "Trung tâm Trợ giúp",
+    "contact": {
+        "title": "Liên hệ với chúng tôi",
+        "message": "Nếu bạn cần liên hệ với chúng tôi, bạn có thể gửi email đến địa chỉ:"
+    },
+    "analysis": {
+        "title": "Đang phân tích ván đấu",
+        "part1": "Bạn có thể phân tích ván đấu của bạn ở",
+        "part2": "Trang phân tích của WintrChess",
+        "part3": ". Với đánh giá của Stockfish, độ chính xác và phân loại nước đi - nên là bạn có thể tìm ra những nước đi thiên tài và ngớ ngẩn của bạn - được cung cấp miễn phí. Bạn sẽ thấy một cái bàn cờ phân tích ở giữa trang, đây là nơi bạn có thể xem những nước đi từ ván đấu bạn đã lựa chọn. Để chọn một ván đấu, bạn cần sử dụng bộ chọn ván đấu mà chúng tôi đã cung cấp ở thanh bên phải. Nó nhìn như này:",
+        "part4": "Bạn có thể nhập vào bất kỳ ván đấu nào bằng cách sử dụng PGN của nó. Nếu cần, bạn cũng có thể chọn một ván đấu từ tài khoản chess.com hoặc Lichess của bạn. Bạn sẽ cần nhấn vào nút \"Tìm kiếm ván đấu\" để duyệt qua những ván đấu từ tài khoản của bạn, và có thể chọn bất kỳ cái nào trong số đó bằng việc nhấn vào nó. Cuối cùng, bạn có thể nhập một chuỗi FEN duy nhất. Trong bất kỳ cách nào, bạn cũng sẽ có thể tự đi quân sau khi bạn nhập ván đấu vào, sau đó sẽ được tính toán và phân loại.",
+        "part5": "Sau khi chọn xong một ván đấu, đơn giản nhấn vào nút \"Phân tích\" để bắt đầu phân tích. Bạn cũng có thể đi quân trên bàn cờ nếu muốn khởi đầu từ vị trí bắt đầu."
+    }
+}

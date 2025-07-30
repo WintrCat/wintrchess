@@ -1,0 +1,22 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.accountButton {
+    padding: 10px 30px;
+}
+
+.deleteAccountDialogMessage {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+
+.deleteAccountConfirmation {
+    padding: 5px 20px;
+
+    background-color: rgba(0, 0, 0, 0.15);
+}

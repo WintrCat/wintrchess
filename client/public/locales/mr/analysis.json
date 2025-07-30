@@ -1,0 +1,81 @@
+{
+    "title": "गेम रिपोर्ट",
+    "settings": {
+        "title": "विश्लेषण सेटिंग्ज",
+        "engine": "इंजिन"
+    },
+    "gameSelector": {
+        "sourceLabel": "खेळ मधून/येथून लोड करा",
+        "sourcePlaceholders": {
+            "pgn": "पेस्ट पीजीएन...",
+            "fen": "FEN स्ट्रिंग...",
+            "chessCom": "chess.com वापरकर्ता नाव...",
+            "lichess": "लिचेस वापरकर्ता नाव..."
+        },
+        "searchGamesButton": "खेळ शोधा",
+        "uploadPGNButton": "पीजीएन फाइल अपलोड करा",
+        "errors": {
+            "noGameSelected": "कृपया बुद्धिबळ खेळ निवडा",
+            "invalidGame": "अवैध खेळाचा अर्थ समजण्यात अपयश आले."
+        }
+    },
+    "gameSearchMenu": {
+        "title": "एक खेळ निवडा",
+        "loading": "गेम शोधत आहेत...",
+        "loadingLong": "थोडा वेळ लागत आहे, कृपया थांबा...",
+        "userNotFound": "आम्हाला या युजरनेमसह अकाऊंट सापडले नाही.",
+        "noGamesFound": "या महिन्यात कोणतेही खेळ सापडले नाहीत.",
+        "selectedToast": "खेळाची निवड झाली आहे!"
+    },
+    "analyseButton": "विश्लेषण करा",
+    "analysisError": "विश्लेषण अपयशी ठरले; ही आपल्या ब्राउझरची समस्या असू शकते.",
+    "stateTreeEditor": {
+        "moveContextMenu": {
+            "delete": "तुमची चाल डिलीट करा",
+            "promote": "तुमच्या चालचे प्रमोशन करा"
+        },
+        "addNodePrompt": "काही चाल खेळा..."
+    },
+    "stateTreeTraverser": {
+        "beginning": "सुरवातीला जा",
+        "back": "शेवटची चाल",
+        "play": "खेळा",
+        "pause": "थांबा",
+        "next": "पुढील चाल",
+        "end": "शेवटपर्यंत जा"
+    },
+    "progressReporter": {
+        "evaluating": "मूल्यांकन करत आहोत...",
+        "awaitingCaptcha": "आम्ही CAPTCHA सोडवत आहोत.",
+        "classifying": "वर्गीकरण...",
+        "evaluatingTooltip": "जर याला थोडा वेळ लागला तर आपण सेटिंग्जमध्ये इंजिनची खोली कमी करण्याचा प्रयत्न करू शकता.",
+        "captchaTooltip": "यासाठी काही सेकंद लागू शकतात...",
+        "captchaVerifyFailed": "कॅप्चाची पडताळणी करता आली नाही; पृष्ठ ताजे करण्याचा प्रयत्न करा.",
+        "captchaLoadFailed": "CAPTCHA उघडता येत नाही. तुमचा ब्राउझर शक्यतो जुना आहे.",
+        "captchaUnknownError": "काहीतरी CAPTCHA चूक झाली आहे; वेबपृष्ठ ताजं करण्याचा प्रयत्न करा.",
+        "completeNotification": "विश्लेषण पूर्ण"
+    },
+    "analysisTabBar": {
+        "report": "रिपोर्ट",
+        "analysis": "विश्लेषण"
+    },
+    "accuraciesCard": {
+        "title": "सत्यता"
+    },
+    "classifiedMoveCard": {
+        "unknownError": "वर्गीकरण लोड करता आले नाही.",
+        "insufficientLines": "वर्गीकरणासाठी मागील चाळचे संपूर्ण मूल्यमापन केले आहे याची खात्री करा.",
+        "classifications": {
+            "brilliant": "खूपच छान आहे",
+            "best": "सर्वोत्तम पाऊल आहे",
+            "excellent": "उत्कृष्ट आहे",
+            "okay": "एक ठीक चाल आहे",
+            "inaccuracy": "एक अचूकता आहे",
+            "mistake": "चूक आहे",
+            "blunder": "ही एक चूक आहे",
+            "forced": "बाध्य केले आहे",
+            "theory": "सिद्धांत आहे",
+            "risky": "एक जोखमीची कल्पना आहे"
+        }
+    }
+}

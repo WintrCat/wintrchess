@@ -1,0 +1,104 @@
+{
+    "loading": "Loading...",
+    "back": "Back",
+    "settings": "Settings",
+    "error": "Error",
+    "unknownError": "An unknown error occurred.",
+    "reset": "Reset",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "edit": "Edit",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "navigationBar": {
+        "support": "Support",
+        "signIn": "Sign In",
+        "tooltips": {
+            "support": "Support us ❤",
+            "help": "Help Center"
+        },
+        "profileMenu": {
+            "profile": "Profile",
+            "signOut": "Sign out"
+        }
+    },
+    "sidebar": {
+        "analysis": "Analysis",
+        "archive": "Archive",
+        "news": "News"
+    },
+    "footer": {
+        "privacySettings": "Privacy Settings",
+        "language": "Language",
+        "languagesDialog": {
+            "select": "Select a language",
+            "help": "Help us translate WintrChess"
+        },
+        "termsOfService": "Terms of Service",
+        "privacyPolicy": "Privacy Policy",
+        "openSource": "Open Source"
+    },
+    "confirmDialog": {
+        "yes": "Yes",
+        "no": "No"
+    },
+    "shareGame": {
+        "copyFEN": "Copy FEN",
+        "copyFENToast": "Copied FEN!",
+        "copyPGN": "Copy PGN",
+        "copyPGNToast": "Copied PGN!"
+    },
+    "gameListing": {
+        "gameResults": {
+            "unopinionated": {
+                "win": "White won",
+                "draw": "Draw",
+                "lose": "Black won",
+                "unknown": "Unknown"
+            },
+            "opinionated": {
+                "win": "Won",
+                "draw": "Draw",
+                "lose": "Lost",
+                "unknown": "Unknown"
+            }
+        }
+    },
+    "account": {
+        "fields": {
+            "email": "Email Address",
+            "displayName": "Display Name",
+            "username": "Username"
+        },
+        "errors": {
+            "accountNotFound": "An account with this email does not exist.",
+            "emailTaken": "An account with this email already exists.",
+            "usernameTaken": "This username is already taken.",
+            "invalidEmail": "Invalid email address.",
+            "unverifiedEmail": "Please verify your email address.",
+            "displayNameInvalid": "Display name contains invalid characters.",
+            "displayNameTooShort": "Display name must be at least 3 characters long.",
+            "displayNameTooLong": "Display name cannot be more than 24 characters long.",
+            "usernameAlphanumeric": "Username must be alphanumeric including underscores.",
+            "usernameTooShort": "Username must be at least 3 characters long.",
+            "usernameTooLong": "Username cannot be more than 20 characters long.",
+            "passwordTooShort": "Password must be at least 8 characters long.",
+            "passwordTooLong": "Password cannot be more than 128 characters long.",
+            "passwordNoMatch": "Passwords do not match.",
+            "incorrectEmailPassword": "Incorrect email address or password.",
+            "verificationCooldown": "Please allow 60 seconds before sending another verification link."
+        },
+        "placeholders": {
+            "email": "Email Address...",
+            "displayName": "Display Name...",
+            "username": "Username...",
+            "password": "Password...",
+            "confirmPassword": "Confirm Password..."
+        },
+        "verificationMessage": "We've sent a verification link to your email. Please check your inbox to continue."
+    },
+    "bugReportWidget": {
+        "tooltip": "Copy Console Logs",
+        "toast": "Copied Console Logs!"
+    }
+}

@@ -1,0 +1,24 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 15px;
+    box-sizing: border-box;
+    min-width: 130px;
+    min-height: 55px;
+
+    background-color: var(--ui-shade-3);
+}
+
+.boardContainer {
+    display: flex;
+    width: 100%;
+}

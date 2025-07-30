@@ -1,0 +1,50 @@
+{
+    "loading": "Đang tải...",
+    "back": "Trở lại",
+    "settings": "Cài đặt",
+    "error": "Lỗi",
+    "reset": "Thiết lập lại",
+    "enabled": "Bật",
+    "disabled": "Tắt",
+    "navigationBar": {
+        "support": "Hỗ trợ",
+        "signIn": "Đăng nhập",
+        "tooltips": {
+            "support": "Hỗ trợ chúng tôi ❤",
+            "help": "Trung tâm Trợ giúp"
+        }
+    },
+    "sidebar": {
+        "analysis": "Phân tích",
+        "archive": "Lưu trữ",
+        "news": "Tin tức"
+    },
+    "footer": {
+        "manageConsent": "Quản lý sự đồng ý",
+        "privacyPolicy": "Chính sách về Quyền riêng tư"
+    },
+    "confirmDialog": {
+        "yes": "Có",
+        "no": "Không"
+    },
+    "gameListing": {
+        "gameResults": {
+            "unopinionated": {
+                "win": "Trắng thắng",
+                "draw": "Hòa",
+                "lose": "Đen thắng",
+                "unknown": "Không rõ"
+            },
+            "opinionated": {
+                "win": "Thắng",
+                "draw": "Hòa",
+                "lose": "Thua",
+                "unknown": "Không rõ"
+            }
+        }
+    },
+    "bugReportWidget": {
+        "tooltip": "Sao chép nhật ký console",
+        "toast": "Đã sao chép nhật ký console!"
+    }
+}

@@ -1,0 +1,149 @@
+{
+    "title": "Game Analysis",
+    "optionsToolbar": {
+        "flipBoard": "Flip Board",
+        "share": "Share Game",
+        "save": "Save to Archive",
+        "noArchiveStorage": "You can only store up to 50 games in your Game Archive.",
+        "gameArchived": "Game successfully archived!"
+    },
+    "settings": {
+        "title": "Analysis Settings",
+        "engine": {
+            "descriptions": {
+                "version": "The Chess engine that will be analysing your moves.",
+                "depth": "The number of moves that the engine looks ahead when analysing moves.",
+                "lines": "The number of variations that the engine will consider. Must be at least 2 for some classifications.",
+                "timeLimit": "The maximum amount of time the engine is allowed to analyse a single move.",
+                "suggestionArrows": {
+                    "disabled": "Disabled: Do not show engine arrows",
+                    "continuation": "Top Continuation: Show an arrow for the top move in this position",
+                    "alternative": "Top Alternative: Show an arrow for the top move in the previous position"
+                }
+            },
+            "title": "Engine",
+            "version": "Version",
+            "depth": "Depth",
+            "lines": "Number of Lines",
+            "linesWarning": "At least 2 lines are required for Critical and some Brilliant moves.",
+            "timeLimit": "Time Limit (seconds)",
+            "suggestionArrows": {
+                "title": "Suggestion Arrows",
+                "continuation": "Top Continuation",
+                "alternative": "Top Alternative"
+            }
+        },
+        "classifications": {
+            "title": "Classifications",
+            "hide": "Hide Classifications",
+            "brilliant": "Brilliant",
+            "theory": "Theory"
+        },
+        "other": {
+            "title": "Other",
+            "simpleNotation": "Simple Move Notation",
+            "descriptions": {
+                "simpleNotation": "Show simple descriptions of Chess moves instead of standard notation. Example: Kxf4 -> King on e3 takes f4"
+            }
+        }
+    },
+    "gameSelector": {
+        "sourceLabel": "Load game from",
+        "sourcePlaceholders": {
+            "pgn": "Paste PGN...",
+            "fen": "FEN string...",
+            "chessCom": "Chess.com username...",
+            "lichess": "Lichess username..."
+        },
+        "searchGamesButton": "Search Games",
+        "uploadPGNButton": "Upload PGN File",
+        "statusMessages": {
+            "fetchingLatest": "Loading the latest game..."
+        },
+        "errors": {
+            "noGameSelected": "Please select a Chess game.",
+            "invalidGame": "Failed to parse invalid game."
+        }
+    },
+    "gameSearchMenu": {
+        "title": "Select a game",
+        "loading": "Searching for games...",
+        "loadingLong": "This is taking a while, please wait...",
+        "userNotFound": "We couldn't find an account with this username.",
+        "noGamesFound": "We couldn't find any games for this month.",
+        "unknownError": "Unknown error while searching games.",
+        "selectedToast": "Game selected!"
+    },
+    "analyseButton": "Analyse",
+    "analysisError": "Analysis failed; your device or browser could be outdated.",
+    "realtimeEngine": {
+        "depth": "Depth:",
+        "checkmate": "Checkmate",
+        "error": "Failed to evaluate position."
+    },
+    "stateTreeEditor": {
+        "moveContextMenu": {
+            "delete": "Delete move",
+            "promote": "Promote move"
+        },
+        "addNodePrompt": "Play some moves..."
+    },
+    "stateTreeTraverser": {
+        "beginning": "Go to beginning",
+        "back": "Last move",
+        "play": "Play",
+        "pause": "Pause",
+        "next": "Next move",
+        "end": "Go to end"
+    },
+    "progressReporter": {
+        "evaluating": "Evaluating...",
+        "awaitingCaptcha": "Solving the CAPTCHA...",
+        "classifying": "Classifying...",
+        "evaluatingTooltip": "If this takes a while, you can try lowering the engine depth in the settings.",
+        "captchaTooltip": "This might take a few seconds...",
+        "captchaVerifyFailed": "Could not verify the CAPTCHA; try refreshing the page.",
+        "captchaLoadFailed": "Could not load the CAPTCHA. Your browser is likely outdated.",
+        "captchaUnknownError": "Unknown CAPTCHA error; try refreshing the page.",
+        "reportFailed": "Unknown error while generating the game report; try refreshing the page.",
+        "completeNotification": "Analysis Complete"
+    },
+    "analysisTabBar": {
+        "report": "Report",
+        "analysis": "Analysis"
+    },
+    "accuraciesCard": {
+        "title": "Accuracies"
+    },
+    "classifiedMoveCard": {
+        "unknownError": "A classification could not be loaded.",
+        "insufficientLines": "Make sure the previous move is fully evaluated for a classification.",
+        "classifications": {
+            "brilliant": "is brilliant",
+            "critical": "is the only good move",
+            "best": "is the best move",
+            "excellent": "is excellent",
+            "okay": "is an okay move",
+            "inaccuracy": "is an inaccuracy",
+            "mistake": "is a mistake",
+            "blunder": "is a blunder",
+            "forced": "is forced",
+            "theory": "is theory",
+            "risky": "is a risky idea"
+        },
+        "alternative": "The best move was"
+    },
+    "classifications": {
+        "brilliant": "Brilliant",
+        "critical": "Critical",
+        "best": "Best",
+        "excellent": "Excellent",
+        "okay": "Okay",
+        "inaccuracy": "Inaccuracy",
+        "mistake": "Mistake",
+        "blunder": "Blunder",
+        "forced": "Forced",
+        "theory": "Theory",
+        "risky": "Risky"
+    }
+}

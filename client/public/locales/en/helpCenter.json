@@ -1,0 +1,15 @@
+{
+    "title": "Help Center",
+    "contact": {
+        "title": "Contact Us",
+        "message": "If you need to contact us, you can send an email to:"
+    },
+    "analysis": {
+        "title": "Analysing a game",
+        "part1": "You can analyse your Chess games on the",
+        "part2": "WintrChess Analysis page",
+        "part3": ". Stockfish evaluations, accuracy percentages and move classifications - so that you can find your brilliancies and blunders - are provided free of charge. You will find an analysis board in the centre of the page, which is where you can view the moves of the game you have selected. To select a game, you need to use the game selector we have provided on the right-hand sidebar. It looks like this:",
+        "part4": "You can enter any game using its PGN. If you would like, you can also select a game from your Chess.com or Lichess account if you provide your username. You will need to click the \"Search Games\" button to browse the games on your account, and can select any of them just by clicking them. Lastly, you can enter a single FEN position. In any case, you will be able to add moves manually after you import a game, which will all be evaluated and classified on the fly.",
+        "part5": "After you've selected a game, just click the \"Analyse\" button to begin the analysis. You can also just move a piece on the board if you'd like to begin from the starting position."
+    }
+}

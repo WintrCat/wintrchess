@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("../public/fonts/jetbrainsmono.ttf");
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("../public/fonts/notosans.ttf");
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("../public/fonts/nunito.ttf")
+}
+
+:root {
+    --ui-blue: #467de8;
+    --ui-lavender: #625eb1;
+    --ui-shade-1: #101216;
+    --ui-shade-2: #17191e;
+    --ui-shade-3: #1f2125;
+    --ui-shade-4: #2c2f35;
+    --ui-shade-5: #3b3e43;
+    --ui-shade-6: #3e4349;
+    --ui-shade-7: #50575f;
+
+    --rt-color-dark: #111 !important;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+
+    background-color: var(--ui-shade-1);
+}
+
+* {
+    font-family: "Noto Sans";
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+
+    background-color: #424242;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #919191;
+}

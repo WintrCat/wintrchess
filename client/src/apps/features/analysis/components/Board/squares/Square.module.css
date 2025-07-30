@@ -1,0 +1,52 @@
+.square * {
+    transform: none !important;
+}
+
+.playedHighlight {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.highlight {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    background-color: #eb6150;
+    opacity: 0.8;
+}
+
+.playableMoveCircle {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    width: 30%;
+    height: 30%;
+
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.capturableMoveCircle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+    border-radius: 50%;
+    border: 6px solid rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.classification {
+    position: absolute;
+    right: -15%;
+    top: -15%;
+    width: 45%;
+    height: 45%;
+    z-index: 6;
+}
