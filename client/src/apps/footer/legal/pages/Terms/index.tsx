@@ -156,10 +156,10 @@ function Terms() {
             </span>
 
             <span>
-                4.4 As explained by Section 2.2, you may not use any part of the account system on the Website
-                (or the rest of the Services) to engage in spam, especially through the registration of large
-                numbers of accounts that you will not use, for the sole purpose of negatively impacting our
-                infrastructure or ability to provide the Services.
+                4.4 As explained by <b>Section 2.2</b>, you may not use any part of the account system on the
+                Website (or the rest of the Services) to engage in spam, especially through the registration
+                of large numbers of accounts that you will not use, for the sole purpose of negatively
+                impacting our infrastructure or ability to provide the Services.
             </span>
 
             <h2 style={{ margin: 0 }}>
@@ -178,8 +178,8 @@ function Terms() {
                 have the necessary rights to grant us) an unrestricted, irrevocable, transferable,
                 royalty-free, worldwide right and license to host, use, copy, reproduce, disclose, sell,
                 store, and distribute such Content. The Content can be used by us for any purpose, including
-                that which is commercial, to prepare for the creation of derivative works, or to create
-                sublicenses.
+                that which is commercial, that which prepares for the creation of derivative works, or that
+                which creates sublicenses.
             </span>
 
             <span>
@@ -193,7 +193,7 @@ function Terms() {
                 5.4 We reserve the right to delete, restrict access to partially or fully, or disable any
                 uploaded Content without notice, for any reason or no reason, including but not limited to
                 a breach of these Terms. In order to do this, we exercise the rights granted to us by the
-                license (as explained in <b>Section 4.2</b>) over user contributed Content.
+                license (as explained in <b>Section 5.2</b>) over user contributed Content.
             </span>
 
             <h2 style={{ margin: 0 }}>
