@@ -237,9 +237,12 @@ function Terms() {
             <span>
                 The Services are provided "as is" without any warranties, express or implied.
                 As such, we and our affiliates are not liable for any loss, damages or
-                otherwise inconveniences caused by your use of the Services, nor are we
-                liable for any feature of the Services that you find does not work as you
-                expected.
+                otherwise inconveniences caused by your use or inability to use the Services,
+                nor are we liable for any feature of the Services that you find does not work
+                as you expected. This includes but is not limited to the loss of data or the
+                failure of the Services to operate with any other software or services. Our
+                limitation of liability survives even if we have been advised of the
+                possibility of any of the aforementioned damages.
             </span>
 
             <span>
