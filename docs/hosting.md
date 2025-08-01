@@ -2,6 +2,12 @@
 
 > This is a guide on how to get WintrChess running on your local machine.
 
+## Prerequisites
+
+- Git
+- Node.js 22 or later
+- Docker if you want to host with that
+
 ## Setup
 
 ### Clone the repository
