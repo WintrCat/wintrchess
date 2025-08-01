@@ -107,32 +107,29 @@ function Move({ node, children }: MoveProps) {
             {node?.state.move?.san || children || "?"}
         </span>
 
-        {
-            contextMenuPosition
-            && <ContextMenu
-                position={contextMenuPosition}
-                options={[
-                    {
-                        icon: iconInterfaceDelete,
-                        label: t("stateTreeEditor.moveContextMenu.delete"),
-                        onSelect: deleteNode
-                    },
-                    {
-                        icon: iconInterfaceUp,
-                        label: t("stateTreeEditor.moveContextMenu.promote"),
-                        onSelect: promoteNode
-                    },
-                    ...(process.env.NODE_ENV == "development"
-                        ? [{
-                            icon: iconInterfaceHelp,
-                            label: "Log state tree node",
-                            onSelect: () => console.log(node)
-                        }]
-                        : []
-                    )
-                ]}
-            />
-        }
+        {contextMenuPosition && <ContextMenu
+            position={contextMenuPosition}
+            options={[
+                {
+                    icon: iconInterfaceDelete,
+                    label: t("stateTreeEditor.moveContextMenu.delete"),
+                    onSelect: deleteNode
+                },
+                {
+                    icon: iconInterfaceUp,
+                    label: t("stateTreeEditor.moveContextMenu.promote"),
+                    onSelect: promoteNode
+                },
+                ...(process.env.NODE_ENV == "development"
+                    ? [{
+                        icon: iconInterfaceHelp,
+                        label: "Log state tree node",
+                        onSelect: () => console.log(node)
+                    }]
+                    : []
+                )
+            ]}
+        />}
     </>;
 }
 

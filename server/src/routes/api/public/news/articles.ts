@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { StatusCodes } from "http-status-codes";
+import { omit } from "lodash-es";
 
 import NewsArticle from "@/database/models/NewsArticle";
 
@@ -15,7 +16,7 @@ router.get("/news", async (req, res) => {
     );
 
     if (articleId) {
-        const article = await NewsArticle.findOne({ id: articleId });
+        const article = await NewsArticle.findOne({ id: articleId }).lean();
 
         if (!article) {
             return res.sendStatus(StatusCodes.NOT_FOUND);
@@ -26,9 +27,12 @@ router.get("/news", async (req, res) => {
         const articles = await NewsArticle.find()
             .sort({ timestamp: "desc" })
             .skip((page - 1) * articlesPerPage)
-            .limit(articlesPerPage);
+            .limit(articlesPerPage)
+            .lean();
 
-        res.json(articles);
+        res.json(articles.map(
+            article => omit(article, ["content"])
+        ));
     }
 });
 

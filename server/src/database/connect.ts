@@ -19,16 +19,10 @@ async function initialiseIndexes() {
 async function connectDatabase() {
     const first = cluster.worker?.id == 1;
 
-    if (!process.env.DATABASE_URI) {
-        if (first) console.log(
-            "database connection failed; URI not specified."
-        );
-
-        return;
-    }
-
     try {
-        await mongoose.connect(process.env.DATABASE_URI);
+        await mongoose.connect(
+            process.env.DATABASE_URI || "mongodb://database"
+        );
         await initialiseIndexes();
         
         if (first) console.log("database connected successfully.");

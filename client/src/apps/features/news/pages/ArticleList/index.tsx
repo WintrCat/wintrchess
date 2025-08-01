@@ -125,7 +125,7 @@ function News() {
             }
 
             {articlesStatus == "success" && articles?.map(
-                article => <ArticleListing article={article}/>
+                article => <ArticleListing article={article} />
             )}
 
             {articlesStatus == "error" && <LogMessage>

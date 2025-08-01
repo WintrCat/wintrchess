@@ -63,7 +63,11 @@ module.exports = {
         ]
     },
     plugins: [
-        new DotenvPlugin({ path: "../.env" })
+        new DotenvPlugin({
+            systemvars: true,
+            path: "../.env",
+            silent: true
+        })
     ],
     mode: nodeEnv
 };

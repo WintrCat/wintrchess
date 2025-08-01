@@ -14,4 +14,6 @@ export const newsArticleSchema = z.object({
 
 export type NewsArticle = z.infer<typeof newsArticleSchema>;
 
+export type NewsArticleMetadata = Omit<NewsArticle, "content">;
+
 export default NewsArticle;

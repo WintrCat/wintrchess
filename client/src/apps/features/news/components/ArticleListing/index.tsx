@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useQueryClient } from "@tanstack/react-query";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import { formatDate } from "shared/lib/utils/date";
 import Button from "@/components/common/Button";
@@ -13,13 +13,12 @@ import iconLogo from "@assets/img/logo.svg";
 import iconInterfaceDelete from "@assets/img/interface/delete.svg";
 import iconInterfaceEdit from "@assets/img/interface/edit.svg";
 
-function ArticleListing({
-    article,
-    editable,
-    hardReload
-}: ArticleListingProps) {
+function ArticleListing({ article, editable }: ArticleListingProps) {
     const queryClient = useQueryClient();
+
     const navigate = useNavigate();
+
+    const url = useLocation();
 
     const [ deleteConfirmOpen, setDeleteConfirmOpen ] = useState(false);
 
@@ -40,10 +39,10 @@ function ArticleListing({
     return <div
         className={styles.wrapper}
         onClick={() => {
-            if (hardReload) {
-                location.href = `/news/${article.id}`;
-            } else {
+            if (url.pathname.startsWith("/news")) {
                 navigate(`/news/${article.id}`);
+            } else {
+                location.href = `/news/${article.id}`;
             }
         }}
     >
@@ -99,16 +98,13 @@ function ArticleListing({
             />
         </div>}
 
-        {
-            deleteConfirmOpen
-            && <ConfirmDialog
-                onClose={() => setDeleteConfirmOpen(false)}
-                onConfirm={deleteArticle}
-                dangerAction
-            >
-                Are you sure you want to delete this news post?
-            </ConfirmDialog>
-        }
+        {deleteConfirmOpen && <ConfirmDialog
+            onClose={() => setDeleteConfirmOpen(false)}
+            onConfirm={deleteArticle}
+            dangerAction
+        >
+            Are you sure you want to delete this news post?
+        </ConfirmDialog>}
     </div>;
 }
 

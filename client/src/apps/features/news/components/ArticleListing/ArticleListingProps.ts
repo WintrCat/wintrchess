@@ -1,9 +1,8 @@
-import NewsArticle from "shared/types/NewsArticle";
+import { NewsArticleMetadata } from "shared/types/NewsArticle";
 
 interface ArticleListingProps {
-    article: NewsArticle;
+    article: NewsArticleMetadata;
     editable?: boolean;
-    hardReload?: boolean;
 }
 
 export default ArticleListingProps;

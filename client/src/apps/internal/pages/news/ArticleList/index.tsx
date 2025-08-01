@@ -61,11 +61,7 @@ function ArticleList() {
             }
 
             {articlesStatus == "success" && articles?.map(article => (
-                <ArticleListing
-                    article={article}
-                    editable
-                    hardReload
-                />
+                <ArticleListing article={article} editable/>
             ))}
 
             {articlesStatus == "error" && <LogMessage>

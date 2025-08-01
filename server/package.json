@@ -12,9 +12,7 @@
         "cookie-parser": "^1.4.6",
         "dotenv": "^16.4.5",
         "express": "^4.19.2",
-        "google-auth-library": "^9.15.1",
         "http-status-codes": "^2.3.0",
-        "jsonwebtoken": "^9.0.2",
         "lodash-es": "^4.17.21",
         "mongodb": "^6.17.0",
         "mongoose": "^8.16.5",
@@ -31,12 +29,10 @@
         "@types/bcrypt": "^5.0.2",
         "@types/cookie-parser": "^1.4.7",
         "@types/express": "^4.17.21",
-        "@types/jsonwebtoken": "^9.0.9",
         "@types/lodash-es": "^4.17.12",
         "@types/node": "^20.12.12",
         "@types/nodemailer": "^6.4.17",
         "@types/uuid": "^10.0.0",
-        "babel-plugin-module-resolver": "^5.0.2",
         "tsc-alias": "^1.8.16"
     },
     "type": "module"

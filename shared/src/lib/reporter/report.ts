@@ -20,7 +20,6 @@ export function getGameAnalysis(
         try {
             node.state.classification = classify(node, options);
         } catch (err) {
-            console.log(err);
             node.state.classification = undefined;
         }
 

@@ -1,3 +1,4 @@
+import cluster from "cluster";
 import mongoose, { mongo } from "mongoose";
 import { betterAuth } from "better-auth";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
@@ -88,6 +89,7 @@ function createAuth(database: mongo.Db) {
                 create: { before: userInitialiser }
             }
         },
+        logger: { disabled: cluster.worker?.id != 1 },
         advanced: { cookiePrefix: "wintrchess" }
     });
 }

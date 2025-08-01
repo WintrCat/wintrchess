@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import NewsArticle from "shared/types/NewsArticle";
+import { NewsArticle, NewsArticleMetadata } from "shared/types/NewsArticle";
 
 export function useNewsArticles(page = 1) {
     const {
@@ -12,7 +12,7 @@ export function useNewsArticles(page = 1) {
             const response = await fetch(`/api/public/news?page=${page}`);
             if (!response.ok) throw new Error();
 
-            const articles: NewsArticle[] = await response.json();
+            const articles: NewsArticleMetadata[] = await response.json();
             
             return articles;
         },
