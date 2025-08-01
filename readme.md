@@ -31,7 +31,9 @@ Libraries, some types and common logic is stored here and can be accessed by bot
 
 ## 📚 Documentation
 
-Please refer to the `docs` directory for help on hosting WintrChess locally, or if you'd like to contribute to the project.
+[Hosting WintrChess locally](https://github.com/WintrCat/wintrchess/blob/master/docs/hosting.md)
+
+[Contributing to the project](https://github.com/WintrCat/wintrchess/blob/master/docs/contributing.md)
 
 ## ☕ Support
 
