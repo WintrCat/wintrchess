@@ -150,6 +150,7 @@ function EvaluationGraph({
                 </>}
 
                 {highlightedPoints.map(point => <ReferenceDot
+                    key={point.nodeId}
                     x={point.x}
                     y={point.y}
                     r={3}

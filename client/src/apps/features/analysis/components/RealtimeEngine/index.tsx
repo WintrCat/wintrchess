@@ -172,7 +172,7 @@ function RealtimeEngine({
         </span>
 
         {displayedLines.map((line, index) => <>
-            <EngineLineInfo line={line} />
+            <EngineLineInfo line={line} key={line.index} />
 
             {index != (displayedLines.length - 1)
                 && <hr className={styles.engineLineSeparator} />
@@ -188,11 +188,9 @@ function RealtimeEngine({
             </>)
         }
 
-        {evaluationError
-            && <LogMessage>
-                {evaluationError}
-            </LogMessage>
-        }
+        {evaluationError && <LogMessage>
+            {evaluationError}
+        </LogMessage>}
     </div>;
 }
 

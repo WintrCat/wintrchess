@@ -170,7 +170,9 @@ function Terms() {
                 5.1 You can upload content ("Content") to the Services by analysing a Chess game, storing
                 games in your Game Archive, or by using other available tools. By uploading Content to
                 the Website, you confirm automatically that you have the necessary rights over such
-                Content, and that in no way does it infringe any third-party rights.
+                Content, and that in no way does it infringe any third-party rights. If you believe that
+                content uploaded to the Website has copied your work in a way that constitutes copyright
+                infringement, please contact us immediately.
             </span>
 
             <span>

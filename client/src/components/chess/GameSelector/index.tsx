@@ -111,7 +111,7 @@ function GameSelector({
                 value={gameSource.key}
             >
                 {Object.values(GameSource)
-                    .map(source => <option value={source.key}>
+                    .map(source => <option key={source.key} value={source.key}>
                         {source.title}
                     </option>)
                 }

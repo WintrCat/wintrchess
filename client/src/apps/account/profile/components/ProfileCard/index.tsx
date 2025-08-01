@@ -28,7 +28,7 @@ function ProfileCard({
                 <span className={styles.displayName}>
                     {profile.displayName}
 
-                    {profile.roles.map(role => <span>
+                    {profile.roles.map(role => <span key={role}>
                         {role}
                     </span>)}
                 </span>

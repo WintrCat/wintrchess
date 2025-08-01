@@ -149,6 +149,7 @@ function GameSearchMenu({
             {status == "success" && fetchStatus == "idle"
                 && (games.length > 0 ?
                     games.slice().map(game => <GameListing
+                        key={game.pgn}
                         game={game}
                         perspective={getColourPlayed(game, username)}
                         onClick={selectListing}

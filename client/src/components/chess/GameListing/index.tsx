@@ -121,8 +121,11 @@ function GameListing<T extends GameListingMetadata>({
         </div>}
 
         <div style={{ width: "250px" }}>
-            {Object.values(game.players)
-                .map(player => <div className={styles.playerProfile}>
+            {Object.entries(game.players)
+                .map(([ colour, player ]) => <div
+                    className={styles.playerProfile}
+                    key={colour}
+                >
                     {player.title && <span className={styles.playerTitle}>
                         {player.title}
                     </span>}

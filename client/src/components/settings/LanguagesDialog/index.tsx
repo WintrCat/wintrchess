@@ -23,6 +23,7 @@ function LanguagesDialog({ onClose }: LanguagesDialogProps) {
 
         <div className={styles.languages}>
             {languages.map(lang => <div
+                key={lang.id}
                 className={styles.language}
                 onClick={() => setLanguage(lang.id)}
             >

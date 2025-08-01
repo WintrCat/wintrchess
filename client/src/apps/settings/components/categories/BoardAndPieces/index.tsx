@@ -112,6 +112,7 @@ function BoardAndPieces() {
 
         <div className={styles.presets}>
             {boardColourPresets.map(preset => <BoardColourPreset
+                key={preset.name}
                 lightSquareColour={preset.light}
                 darkSquareColour={preset.dark}
                 title={t(
