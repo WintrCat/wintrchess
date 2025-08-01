@@ -1,8 +1,9 @@
-import React, { lazy, useEffect } from "react";
+import React, { lazy, Suspense, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import PageWrapper from "@/components/layout/PageWrapper";
+import LoadingPlaceholder from "@/components/layout/LoadingPlaceholder";
 import { removeDefaultConsentLink } from "@/lib/consent";
 
 const SignUp = lazy(() => import("./pages/SignUp"));
@@ -22,10 +23,12 @@ function App() {
 
     return <BrowserRouter>
         <PageWrapper>
-            <Routes>
-                <Route path="/signup" element={<SignUp/>} />
-                <Route path="/signin" element={<SignIn/>} />
-            </Routes>
+            <Suspense fallback={<LoadingPlaceholder/>}>
+                <Routes>
+                    <Route path="/signup" element={<SignUp/>} />
+                    <Route path="/signin" element={<SignIn/>} />
+                </Routes>
+            </Suspense>
         </PageWrapper>
     </BrowserRouter>;
 }
