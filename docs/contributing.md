@@ -72,10 +72,10 @@ Pull request / commit names generally follow [conventional commits](https://www.
 <type of change>(<optional scope>): <present tense description>
 
 feat(fe): add cool new feature
-chore: update readme
+docs: add funny message
 ```
 
-The scopes are `fe` (Frontend), `be` (Backend) and `sh` (Shared). You can omit the scope if multiple packages or root-level files are substantially changed.
+The scopes are `fe` (Frontend), `be` (Backend), and `sh` (Shared). You can omit the scope if multiple packages or root-level files are substantially changed.
 
 If your changes deal in personal information, please make sure you describe what kind of data is collected, and what security considerations you've taken into account. This makes it easier to make any necessary amendments to the privacy policy thereafter.
 

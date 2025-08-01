@@ -18,7 +18,7 @@ cd wintrchess
 These are the environment variables that you can set when hosting WintrChess:
 
 ```toml
-NODE_ENV=production
+NODE_ENV="production"
 ```
 
 The environment that the app is running in. Can be one of two values: `production` (default) and `development`. In development mode, some features are enabled to help with debugging.
@@ -56,7 +56,7 @@ MAXIMUM_ARCHIVE_SIZE=50
 The maximum number of games that the server will allow users to keep in their game archive. Defaults to `50`.
 
 ```toml
-INTERNAL_PASSWORD=squidward
+INTERNAL_PASSWORD="squidward"
 ```
 
 The password for the internal dashboard, where administrators can change the announcement banner and author news posts.
