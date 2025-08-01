@@ -47,7 +47,7 @@ For example, `http://localhost:8080` or `https://wintrchess.com`.
 DATABASE_URI="mongodb://" # ...
 ```
 
-A connection string for a MongoDB database. Collections, indexes etc. will be created when the app runs. Defaults to `mongodb://database`.
+A connection string for a MongoDB database. Collections, indexes etc. will be created when the app runs. Defaults to `mongodb://database/wintrchess`.
 
 ```toml
 ANALYSIS_SESSION_ACTIONS=80

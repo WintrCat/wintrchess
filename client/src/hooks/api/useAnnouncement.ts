@@ -12,6 +12,7 @@ function useAnnouncement() {
             const announcementResponse = await fetch("/api/public/announcement");
             return await announcementResponse.json();
         },
+        retry: false,
         refetchOnWindowFocus: false
     }, queryClient);
 

@@ -21,7 +21,7 @@ async function connectDatabase() {
 
     try {
         await mongoose.connect(
-            process.env.DATABASE_URI || "mongodb://database"
+            process.env.DATABASE_URI || "mongodb://database/wintrchess"
         );
         await initialiseIndexes();
         
