@@ -2,13 +2,15 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { trim } from "lodash-es";
 
-import Game from "shared/types/game/Game";
+import { Game, getColourPlayed } from "shared/types/game/Game";
+import PieceColour from "shared/constants/PieceColour";
 import {
     GameSource,
     GameSourceType,
     GameSelectorButton
 } from "@/components/chess/GameSelector/GameSource";
 import useGameSelector from "@/hooks/useGameSelector";
+import useAnalysisBoardStore from "@/apps/features/analysis/stores/AnalysisBoardStore";
 import Button from "@/components/common/Button";
 import FileUploader from "@/components/common/FileUploader";
 import GameSearchMenu from "../GameSearchMenu";
@@ -39,6 +41,10 @@ function GameSelector({
         savedFieldInputs,
         setSavedFieldInput
     } = useGameSelector();
+
+    const setBoardFlipped = useAnalysisBoardStore(
+        state => state.setBoardFlipped
+    );
 
     const [ gameSource, setGameSource ] = useState(
         saveLocalStorage ? savedGameSource : GameSource.PGN
@@ -174,19 +180,23 @@ function GameSelector({
             </FileUploader>
         }
         
-        {searchMenuOpen
-            && <GameSearchMenu
-                username={trim(currentFieldInput)}
-                gameSource={gameSource}
-                onClose={() => setSearchMenuOpen(false)}
-                onGameSelect={game => {
-                    setServiceGames({
-                        ...serviceGames,
-                        [gameSource.key]: game
-                    });
-                }}
-            />
-        }
+        {searchMenuOpen && <GameSearchMenu
+            username={trim(currentFieldInput)}
+            gameSource={gameSource}
+            onClose={() => setSearchMenuOpen(false)}
+            onGameSelect={game => {
+                setServiceGames({
+                    ...serviceGames,
+                    [gameSource.key]: game
+                });
+
+                const usersColour = getColourPlayed(
+                    game, trim(currentFieldInput)
+                );
+
+                setBoardFlipped(usersColour == PieceColour.BLACK);
+            }}
+        />}
     </div>;
 }
 
