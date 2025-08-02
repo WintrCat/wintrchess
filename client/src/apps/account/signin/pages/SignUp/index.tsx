@@ -75,10 +75,14 @@ function SignUp() {
             })
         });
 
-        if (registerResponse.error) setStatus({
-            theme: "error",
-            message: getErrorMessage(registerResponse.error.code)
-        });
+        if (registerResponse.error) {
+            setStatus({
+                theme: "error",
+                message: getErrorMessage(registerResponse.error.code)
+            });
+
+            console.error(`failed to sign up: ${registerResponse.error.code}`);
+        }
 
         setRegistrationPending(false);
     }
