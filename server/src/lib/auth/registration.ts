@@ -15,8 +15,12 @@ const registrationValidator = createAuthMiddleware(async ctx => {
     
     const registration: Registration = ctx.body;
 
-    if (!schemas.registration.safeParse(registration).success)
-        throw new APIError(StatusCodes.BAD_REQUEST);
+    const parse = schemas.registration.safeParse(registration);
+
+    if (!parse.success)
+        throw new APIError(StatusCodes.BAD_REQUEST, {
+            code: parse.error.issues.at(0)?.message
+        });
 });
 
 const userDeleter = createAuthMiddleware(async ctx => {
@@ -45,13 +49,17 @@ export const userInitialiser = async (
     if (!schemas.displayName.safeParse(user.name).success)
         throw new APIError(StatusCodes.BAD_REQUEST);
 
+    const displayName = user.name
+        .replace(/[^\p{L}\p{N}_ \-.]/gu, "")
+        .slice(0, schemas.displayName.maxLength || 24);
+
     let username = user.name.toLowerCase()
-        .replace(/\s/g, "")
+        .replace(/[^a-z0-9_]/gi, "")
         .slice(0, schemas.username.maxLength || 20);
 
     const existingUser = await User.findOne({ username });
 
-    if (existingUser) {
+    if (existingUser || username.length < (schemas.username.minLength || 3)) {
         if (ctx?.path.startsWith("/sign-up/email"))
             throw new APIError(
                 StatusCodes.CONFLICT,
@@ -66,7 +74,8 @@ export const userInitialiser = async (
     const initialisedUser: AuthInfer["user"] = {
         ...user,
         username: username,
-        name: user.name.slice(0, schemas.displayName.maxLength || 24),
+        name: displayName.length >= (schemas.displayName.minLength || 3)
+            ? displayName : username,
         roles: []
     };
 
