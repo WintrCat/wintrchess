@@ -20,7 +20,9 @@ export async function sendAccountEmail(options: AccountEmailOptions) {
     }
 
     const transporter = mailer.createTransport({
-        service: "gmail",
+        host: "smtp.gmail.com",
+        port: 587,
+        requireTLS: true,
         auth: {
             user: process.env.EMAIL_ACCOUNT,
             pass: process.env.AUTOMATED_EMAIL_KEY
