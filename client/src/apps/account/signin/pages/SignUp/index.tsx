@@ -81,7 +81,9 @@ function SignUp() {
                 message: getErrorMessage(registerResponse.error.code)
             });
 
-            console.error(`failed to sign up: ${registerResponse.error}`);
+            console.error(
+                `failed to sign up: ${JSON.stringify(registerResponse.error)}`
+            );
         }
 
         setRegistrationPending(false);
