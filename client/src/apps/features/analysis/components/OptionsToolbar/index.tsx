@@ -157,7 +157,7 @@ function OptionsToolbar() {
 
             <Tooltip
                 id="options-toolbar-share"
-                content={t("options.share")}
+                content={t("optionsToolbar.share")}
                 delayShow={500}
             />
 

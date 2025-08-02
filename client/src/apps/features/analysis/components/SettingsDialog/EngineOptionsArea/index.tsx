@@ -39,11 +39,11 @@ function EngineOptionsArea() {
             value: EngineArrowType.DISABLED
         },
         {
-            translabel: t("settings.engine.suggestionArrows.continuation"),
+            label: t("settings.engine.suggestionArrows.continuation"),
             value: EngineArrowType.TOP_CONTINUATION
         },
         {
-            translabel: t("settings.engine.suggestionArrows.alternative"),
+            label: t("settings.engine.suggestionArrows.alternative"),
             value: EngineArrowType.TOP_ALTERNATIVE
         }
     ], [i18n.language]);
