@@ -9,7 +9,7 @@ function parseFenString(fen: string): Game {
 
     return {
         initialPosition: board.fen(),
-        pgn: board.pgn() + "*",
+        pgn: board.pgn(),
         players: {
             white: {
                 username: "White",
