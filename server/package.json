@@ -1,8 +1,6 @@
 {
     "scripts": {
         "build": "tsc && tsc-alias -f",
-        "dev": "ts-node-dev --respawn --transpile-only  src/index.ts --esm",
-        "start": "node dist/index.js",
         "check": "tsc --noEmit"
     },
     "dependencies": {
@@ -36,8 +34,6 @@
         "@types/node": "^20.12.12",
         "@types/nodemailer": "^6.4.17",
         "@types/uuid": "^10.0.0",
-        "ts-node": "^10.9.2",
-        "ts-node-dev": "^2.0.0",
         "tsc-alias": "^1.8.16"
     },
     "type": "module"
