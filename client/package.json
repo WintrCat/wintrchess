@@ -1,7 +1,8 @@
 {
     "scripts": {
         "build": "webpack",
-        "check": "tsc --noEmit"
+        "check": "tsc --noEmit",
+        "dev": "webpack serve --config webpack.dev.config.js"
     },
     "devDependencies": {
         "@babel/core": "^7.24.6",
