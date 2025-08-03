@@ -85,12 +85,12 @@ module.exports = {
           filename: `${entryName}.html`,
           // This is the corrected template path logic
           template: `./public/apps/${entryName === "internal" || entryName === "settings" || entryName === "unfound"
-              ? `${entryName}.html`
-              : entryName === "signin" || entryName === "resetPassword" || entryName === "profile"
-                ? `account/${entryName}.html`
-                : entryName === "analysis" || entryName === "archive" || entryName === "news"
-                  ? `features/${entryName}.html`
-                  : `footer/${entryName}.html`
+            ? `${entryName}.html`
+            : entryName === "signin" || entryName === "resetPassword" || entryName === "profile"
+              ? `account/${entryName}.html`
+              : entryName === "analysis" || entryName === "archive" || entryName === "news"
+                ? `features/${entryName}.html`
+                : `footer/${entryName}.html`
             }`,
           chunks: [entryName],
         })
@@ -98,7 +98,7 @@ module.exports = {
   ],
   mode: nodeEnv,
   devServer: {
-    port: 8080,
+    port: 3000,
     hot: true,
     compress: true,
     static: {

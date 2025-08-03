@@ -9,6 +9,7 @@ import connectDatabase from "@/database/connect";
 import hostnameWhitelist from "@/lib/security/whitelist";
 import getAuth from "@/lib/auth";
 import mainRouter from "./routes";
+import cors from "cors"; // Add this import
 
 dotenv.config();
 
@@ -28,7 +29,12 @@ async function main() {
     await connectDatabase();
 
     const app = express();
-
+    app.use(cors({
+        origin: process.env.CORS_ORIGIN || true, // or specify your allowed origins
+        credentials: true, // if you need to support cookies/auth
+        methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // allowed methods
+        allowedHeaders: ["Content-Type", "Authorization"] // allowed headers
+    }));
     app.use(cookieParser());
     app.use(hostnameWhitelist);
 
@@ -48,8 +54,8 @@ async function main() {
 
         console.log(
             `server running on port ${port} `
-            + `(${nodeEnv} mode, ${coreCount} thread`
-            + (coreCount > 1 ? "s)" : ")")
+      + `(${nodeEnv} mode, ${coreCount} thread`
+      + (coreCount > 1 ? "s)" : ")")
         );
     });
 }

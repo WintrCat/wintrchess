@@ -1,7 +1,7 @@
 {
     "scripts": {
         "build": "tsc && tsc-alias -f",
-    "dev": "ts-node-dev --respawn --transpile-only  src/index.ts --esm",
+        "dev": "ts-node-dev --respawn --transpile-only  src/index.ts --esm",
         "start": "node dist/index.js",
         "check": "tsc --noEmit"
     },
@@ -12,6 +12,7 @@
         "chess.js": "^1.4.0",
         "compress-json": "^3.2.0",
         "cookie-parser": "^1.4.6",
+        "cors": "^2.8.5",
         "dotenv": "^16.4.5",
         "express": "^4.19.2",
         "http-status-codes": "^2.3.0",

@@ -17,14 +17,15 @@ export async function analyseStateTree(
     rootNode: StateTreeNode,
     options?: AnalysisOptions
 ): APIResponse<{ gameAnalysis: GameAnalysis }> {
-    const reportURL = "/api/analysis/analyse"
-        + `?brilliant=${String(options?.includeBrilliant)}`
-        + `&critical=${String(options?.includeCritical)}`
-        + `&theory=${String(options?.includeTheory)}`;
+    const reportURL = "http://localhost:8080/api/analysis/analyse"
+    + `?brilliant=${String(options?.includeBrilliant)}`
+    + `&critical=${String(options?.includeCritical)}`
+    + `&theory=${String(options?.includeTheory)}`;
 
     const reportResponse = await fetch(reportURL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        credentials: "include",
         body: JSON.stringify(
             serializeNode(rootNode)
         )
