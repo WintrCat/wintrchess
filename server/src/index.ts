@@ -19,45 +19,46 @@ const nodeEnv = process.env.NODE_ENV || "production";
 const coreCount = os.cpus().length;
 
 async function main() {
-    if (cluster.isPrimary) {
-        console.log("starting server...");
-        for (let i = 0; i < coreCount; i++) cluster.fork();
+  if (cluster.isPrimary) {
+    console.log("starting server...");
+    for (let i = 0; i < coreCount; i++) cluster.fork();
 
-        return;
-    }
+    return;
+  }
 
-    await connectDatabase();
+  await connectDatabase();
 
-    const app = express();
-    app.use(cors({
-        origin: process.env.CORS_ORIGIN || true, // or specify your allowed origins
-        credentials: true, // if you need to support cookies/auth
-        methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // allowed methods
-        allowedHeaders: ["Content-Type", "Authorization"] // allowed headers
-    }));
-    app.use(cookieParser());
-    app.use(hostnameWhitelist);
+  const app = express();
+  // TODO: use cors only in dev mode
+  app.use(cors({
+    origin: process.env.CORS_ORIGIN || true, // or specify your allowed origins
+    credentials: true, // if you need to support cookies/auth
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // allowed methods
+    allowedHeaders: ["Content-Type", "Authorization"] // allowed headers
+  }));
+  app.use(cookieParser());
+  app.use(hostnameWhitelist);
 
-    // Static assets
-    app.use("/",
-        express.static("client/dist"),
-        express.static("client/public")
-    );
+  // Static assets
+  app.use("/",
+    express.static("client/dist"),
+    express.static("client/public")
+  );
 
-    // Normal endpoints
-    app.all("/auth/account/*", toNodeHandler(getAuth()));
-    app.use("/", mainRouter);
+  // Normal endpoints
+  app.all("/auth/account/*", toNodeHandler(getAuth()));
+  app.use("/", mainRouter);
 
-    // Start listening for requests
-    app.listen(port, () => {
-        if (cluster.worker?.id != 1) return;
+  // Start listening for requests
+  app.listen(port, () => {
+    if (cluster.worker?.id != 1) return;
 
-        console.log(
-            `server running on port ${port} `
+    console.log(
+      `server running on port ${port} `
       + `(${nodeEnv} mode, ${coreCount} thread`
       + (coreCount > 1 ? "s)" : ")")
-        );
-    });
+    );
+  });
 }
 
 main();
