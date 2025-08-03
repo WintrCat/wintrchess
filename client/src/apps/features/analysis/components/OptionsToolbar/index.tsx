@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Tooltip } from "react-tooltip";
+import { useShallow } from "zustand/react/shallow";
 import { StatusCodes } from "http-status-codes";
 import { FetchStatus } from "@tanstack/react-query";
 import { cloneDeep, omit } from "lodash-es";
 
 import { defaultAnalysedGame } from "shared/constants/utils";
+import AnalysisStatus from "@analysis/constants/AnalysisStatus";
+import useAnalysisProgressStore from "../../stores/AnalysisProgressStore";
 import { useAnalysisGameStore } from "@analysis/stores/AnalysisGameStore";
 import useAnalysisBoardStore from "@analysis/stores/AnalysisBoardStore";
 import useRealtimeEngineStore from "@analysis/stores/RealtimeEngineStore";
@@ -31,6 +34,18 @@ function OptionsToolbar() {
     const [ searchParams, setSearchParams ] = useSearchParams();
 
     const { status: profileStatus } = useAuthedProfile();
+
+    const {
+        evaluationController,
+        setAnalysisStatus,
+        setAnalysisError
+    } = useAnalysisProgressStore(
+        useShallow(state => ({
+            evaluationController: state.evaluationController,
+            setAnalysisStatus: state.setAnalysisStatus,
+            setAnalysisError: state.setAnalysisError
+        }))
+    );
 
     const {
         analysisGame,
@@ -61,6 +76,13 @@ function OptionsToolbar() {
             ["game"]
         ));
 
+        // Abort any ongoing evaluations or analyses
+        evaluationController?.abort();
+
+        setAnalysisStatus(AnalysisStatus.INACTIVE);
+        setAnalysisError();
+
+        // Reset analysis game & evaluation bar
         const freshAnalysisGame = cloneDeep(defaultAnalysedGame);
 
         setGameAnalysisOpen(false);

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import useGameSelector from "@/hooks/useGameSelector";
+import useAnalysisProgressStore from "@analysis/stores/AnalysisProgressStore";
 import GameSelector from "@/components/chess/GameSelector";
 import LogMessage from "@/components/common/LogMessage";
 
@@ -11,6 +12,10 @@ import * as styles from "./GameSelection.module.css";
 
 function GameSelection() {
     const { setSelectedGame } = useGameSelector();
+
+    const setEvaluationController = useAnalysisProgressStore(
+        state => state.setEvaluationController
+    );
 
     const [ statusMessage, setStatusMessage ] = useState<string>();
     const [ importError, setImportError ] = useState<string>();
@@ -25,7 +30,9 @@ function GameSelection() {
             return setImportError((err as Error).message);
         }
 
-        evaluateGame(importedGame);
+        const controller = await evaluateGame(importedGame);
+
+        setEvaluationController(controller);
     }
     
     return <>
@@ -36,17 +43,13 @@ function GameSelection() {
 
         <AnalyseButton onClick={onAnalyseClick} />
 
-        {statusMessage
-            && <i className={styles.statusMessage}>
-                {statusMessage}
-            </i>
-        }
+        {statusMessage && <i className={styles.statusMessage}>
+            {statusMessage}
+        </i>}
 
-        {importError
-            && <LogMessage>
-                {importError}
-            </LogMessage>
-        }
+        {importError && <LogMessage>
+            {importError}
+        </LogMessage>}
     </>;
 }
 

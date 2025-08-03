@@ -66,16 +66,14 @@ function useImportGame() {
             if (
                 savedGameSource.selectorButton
                 != GameSelectorButton.SEARCH_GAMES
-            ) {
-                throw new Error(t(messages.noGameSelected));
-            }
+            ) throw new Error(t(messages.noGameSelected));
 
             onStatusMessage?.(t(messages.fetchingLatest));
 
             const date = new Date();
 
             try {
-                var games = savedGameSource.key == GameSource.CHESS_COM.key
+                var gamesResponse = savedGameSource.key == GameSource.CHESS_COM.key
                     ? await getChessComGames(
                         savedCurrentFieldInput,
                         date.getMonth() + 1,
@@ -87,26 +85,22 @@ function useImportGame() {
                         date.getFullYear()
                     );
             } catch (err) {
-                throw new Error(
-                    t((err as Error).message)
-                );
+                throw new Error(t((err as Error).message));
             } finally {
                 onStatusMessage?.();
             }
 
-            const latestGame = games.at(0);
+            const latestGame = gamesResponse.games?.at(0);
 
-            if (!latestGame) {
-                throw new Error(t(messages.noGameSelected));
-            }
+            if (!latestGame) throw new Error(t(messages.noGameSelected));
 
             importedGame = latestGame;
         }
 
         // Set analysis game to the selected one
         const analysisGame: AnalysedGame = {
-            ...importedGame,
-            stateTree: parseStateTree(importedGame)
+            ...importedGame!,
+            stateTree: parseStateTree(importedGame!)
         };
 
         setAnalysisGame(analysisGame);
@@ -114,8 +108,8 @@ function useImportGame() {
         setGameAnalysisOpen(true);
 
         // Load profile images from Chess.com if it is possible
-        if (isGameFromChessCom(importedGame)) {
-            getChessComProfileImages(importedGame).then(images => {
+        if (isGameFromChessCom(importedGame!)) {
+            getChessComProfileImages(importedGame!).then(images => {
                 analysisGame.players.white.image = images.white;
                 analysisGame.players.black.image = images.black;
 

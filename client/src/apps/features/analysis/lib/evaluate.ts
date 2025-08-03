@@ -18,13 +18,17 @@ interface EvaluateMovesOptions {
     verbose?: boolean;
 }
 
-/**
- * @throws {EvaluateMovesError}
- */
-async function evaluateMoves(
+interface EvaluationProcess {
+    evaluate: () => Promise<StateTreeNode[]>;
+    controller: AbortController;
+}
+
+function createGameEvaluator(
     game: AnalysedGame,
     options: EvaluateMovesOptions
-): Promise<StateTreeNode[]> {
+): EvaluationProcess {
+    const controller = new AbortController();
+
     const stateTreeNodes = getNodeChain(game.stateTree);
 
     // Each state tree node keeps a progress from 0 to 1
@@ -34,117 +38,131 @@ async function evaluateMoves(
         return round(sum(progresses) / stateTreeNodes.length, 3);
     }
 
-    // Apply cloud evaluations where possible
-    for (const stateTreeNode of stateTreeNodes) {
-        try {
-            var cloudEngineLines = await getCloudEvaluation(
-                stateTreeNode.state.fen, options.cloudEngineLines
-            );
-        } catch {
-            break;
+    async function evaluator(): Promise<StateTreeNode[]> {
+        // Apply cloud evaluations where possible
+        for (const stateTreeNode of stateTreeNodes) {
+            if (controller.signal.aborted) break;
+
+            try {
+                var cloudEngineLines = await getCloudEvaluation(
+                    stateTreeNode.state.fen, options.cloudEngineLines
+                );
+            } catch {
+                break;
+            }
+
+            const topCloudLine = getTopEngineLine(cloudEngineLines);
+            if (!topCloudLine) break;
+
+            if (topCloudLine.depth < options.engineDepth) break;
+            if (cloudEngineLines.length < options.cloudEngineLines) break;
+
+            stateTreeNode.state.engineLines = [
+                ...stateTreeNode.state.engineLines,
+                ...cloudEngineLines
+            ];
+
+            progresses.push(1);
+            options.onProgress?.(getProgress());
         }
 
-        const topCloudLine = getTopEngineLine(cloudEngineLines);
-        if (!topCloudLine) break;
+        // Locally evaluate remaining positions
 
-        if (topCloudLine.depth < options.engineDepth) break;
-        if (cloudEngineLines.length < options.cloudEngineLines) break;
+        // Maximum engine count or however many are needed for each
+        // remaining position, add 1 for cutoff for last cloud evaluated state
+        const evaluatedStateCount = stateTreeNodes.filter(
+            node => node.state.engineLines.some(
+                line => line.source == EngineVersion.LICHESS_CLOUD
+            )
+        ).length;
 
-        stateTreeNode.state.engineLines = [
-            ...stateTreeNode.state.engineLines,
-            ...cloudEngineLines
-        ];
+        const engineCount = Math.min(
+            options.maxEngineCount || 1,
+            (stateTreeNodes.length - evaluatedStateCount) + 1
+        );
 
-        progresses.push(1);
-        options.onProgress?.(getProgress());
-    }
-
-    // Locally evaluate remaining positions
-
-    // Maximum engine count or however many are needed for each
-    // remaining position, add 1 for cutoff for last cloud evaluated state
-    const evaluatedStateCount = stateTreeNodes.filter(
-        node => node.state.engineLines.some(
-            line => line.source == EngineVersion.LICHESS_CLOUD
-        )
-    ).length;
-
-    const engineCount = Math.min(
-        options.maxEngineCount || 1,
-        (stateTreeNodes.length - evaluatedStateCount) + 1
-    );
-
-    return new Promise((res, rej) => {
         let enginesResting = 0;
         let stateTreeNodeIndex = Math.max(evaluatedStateCount - 1, 0);
 
-        // Bring an engine to a new FEN
-        function evaluateNextPosition(engine: Engine) {
-            const currentStateTreeNodeIndex = stateTreeNodeIndex;
-            const currentStateTreeNode = stateTreeNodes[stateTreeNodeIndex];
+        return await new Promise((res, rej) => {
+            // Bring an engine to a new FEN
+            function evaluateNextPosition(engine: Engine) {
+                const currentStateTreeNodeIndex = stateTreeNodeIndex;
+                const currentStateTreeNode = stateTreeNodes[stateTreeNodeIndex];
 
-            if (stateTreeNodeIndex >= stateTreeNodes.length) {
-                engine.terminate();
+                if (stateTreeNodeIndex >= stateTreeNodes.length) {
+                    engine.terminate();
 
-                if (++enginesResting == engineCount)
-                    res(stateTreeNodes);
+                    if (++enginesResting == engineCount)
+                        res(stateTreeNodes);
 
-                return;
+                    return;
+                }
+
+                engine.setPosition(game.initialPosition, stateTreeNodes
+                    .slice(0, stateTreeNodeIndex + 1)
+                    .filter(node => node.state.move)
+                    .map(node => node.state.move!.uci)
+                );
+
+                engine.evaluate({
+                    depth: options.engineDepth,
+                    timeLimit: options.engineTimeLimit
+                        ? options.engineTimeLimit * 1000
+                        : undefined,
+                    onEngineLine: line => {
+                        // Depth 0 is given for states with no legal moves
+                        const localProgress = line.depth == 0
+                            ? 1 : line.depth / options.engineDepth;
+                        
+                        // Progress value will already exist for cutoff node
+                        progresses[currentStateTreeNodeIndex] = Math.max(
+                            progresses[currentStateTreeNodeIndex] || 0,
+                            localProgress
+                        );
+
+                        options.onProgress?.(getProgress());
+                    }
+                }).then(lines => {
+                    progresses[currentStateTreeNodeIndex] = 1;
+
+                    currentStateTreeNode.state.engineLines = [
+                        ...currentStateTreeNode.state.engineLines,
+                        ...lines
+                    ];
+
+                    evaluateNextPosition(engine);
+                });
+
+                stateTreeNodeIndex++;
             }
 
-            engine.setPosition(game.initialPosition, stateTreeNodes
-                .slice(0, stateTreeNodeIndex + 1)
-                .filter(node => node.state.move)
-                .map(node => node.state.move!.uci)
-            );
+            // Start engines on first positions
+            const engines: Engine[] = [];
 
-            engine.evaluate({
-                depth: options.engineDepth,
-                timeLimit: options.engineTimeLimit
-                    ? options.engineTimeLimit * 1000
-                    : undefined,
-                onEngineLine: line => {
-                    // Depth 0 is given for states with no legal moves
-                    const localProgress = line.depth == 0
-                        ? 1 : line.depth / options.engineDepth;
-                    
-                    // Progress value will already exist for cutoff node
-                    progresses[currentStateTreeNodeIndex] = Math.max(
-                        progresses[currentStateTreeNodeIndex] || 0,
-                        localProgress
-                    );
+            for (let i = 0; i < engineCount; i++) {
+                const engine = new Engine(options.engineVersion);
+                engines.push(engine);
 
-                    options.onProgress?.(getProgress());
+                options.engineConfig?.(engine);
+
+                if (options.verbose) {
+                    engine.onMessage(console.log);
                 }
-            }).then(lines => {
-                progresses[currentStateTreeNodeIndex] = 1;
 
-                currentStateTreeNode.state.engineLines = [
-                    ...currentStateTreeNode.state.engineLines,
-                    ...lines
-                ];
+                engine.onError(rej);
 
                 evaluateNextPosition(engine);
-            });
-
-            stateTreeNodeIndex++;
-        }
-
-        // Start engines on first positions
-        for (let i = 0; i < engineCount; i++) {
-            const engine = new Engine(options.engineVersion);
-
-            options.engineConfig?.(engine);
-
-            if (options.verbose) {
-                engine.onMessage(console.log);
             }
 
-            engine.onError(rej);
+            controller.signal.addEventListener("abort", () => {
+                engines.forEach(engine => engine.terminate());
+                rej("abort");
+            });
+        });
+    }
 
-            evaluateNextPosition(engine);
-        }
-    });
+    return { evaluate: evaluator, controller };
 }
 
-export default evaluateMoves;
+export default createGameEvaluator;

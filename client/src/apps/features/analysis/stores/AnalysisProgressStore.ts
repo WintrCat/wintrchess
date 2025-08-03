@@ -5,11 +5,13 @@ import AnalysisStatus from "@analysis/constants/AnalysisStatus";
 // Analysis = evaluating & classifying entire game
 // Classify = classification for single, manual move
 interface AnalysisProgressStore {
+    evaluationController?: AbortController;
     evaluationProgress: number;
     analysisStatus: AnalysisStatus;
     analysisError?: string;
     realtimeClassifyError?: string;
 
+    setEvaluationController: (controller?: AbortController) => void;
     setEvaluationProgress: (progress: number) => void;
     setAnalysisStatus: (status: AnalysisStatus) => void;
     setAnalysisError: (error?: string) => void;
@@ -19,6 +21,10 @@ interface AnalysisProgressStore {
 const useAnalysisProgressStore = create<AnalysisProgressStore>(set => ({
     evaluationProgress: 0,
     analysisStatus: AnalysisStatus.INACTIVE,
+
+    setEvaluationController(controller) {
+        set({ evaluationController: controller });
+    },
 
     setEvaluationProgress(progress) {
         set({ evaluationProgress: progress });

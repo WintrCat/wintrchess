@@ -5,7 +5,7 @@ import AnalysisStatus from "@analysis/constants/AnalysisStatus";
 import useSettingsStore from "@/stores/SettingsStore";
 import useAnalysisBoardStore from "@analysis/stores/AnalysisBoardStore";
 import useAnalysisProgressStore from "@analysis/stores/AnalysisProgressStore";
-import evaluateMoves from "@analysis/lib/evaluate";
+import createGameEvaluator from "../lib/evaluate";
 
 function useEvaluateGame() {
     const { t } = useTranslation("analysis");
@@ -27,26 +27,32 @@ function useEvaluateGame() {
     async function evaluateGame(analysisGame: AnalysedGame) {
         setAnalysisStatus(AnalysisStatus.EVALUATING);
 
-        try {
-            await evaluateMoves(analysisGame, {
-                engineVersion: settings.version,
-                engineDepth: settings.depth,
-                engineTimeLimit: settings.timeLimitEnabled
-                    ? settings.timeLimit : undefined,
-                cloudEngineLines: settings.lines,
-                maxEngineCount: 4,
-                engineConfig: engine => engine.setLineCount(settings.lines),
-                onProgress: progress => {
-                    setEvaluationProgress(progress);
-                    dispatchCurrentNodeUpdate();
-                }
+        const evaluator = createGameEvaluator(analysisGame, {
+            engineVersion: settings.version,
+            engineDepth: settings.depth,
+            engineTimeLimit: settings.timeLimitEnabled
+                ? settings.timeLimit : undefined,
+            cloudEngineLines: settings.lines,
+            maxEngineCount: 4,
+            engineConfig: engine => engine.setLineCount(settings.lines),
+            onProgress: progress => {
+                setEvaluationProgress(progress);
+                dispatchCurrentNodeUpdate();
+            }
+        });
+
+        evaluator.evaluate()
+            .then(() => setAnalysisStatus(
+                AnalysisStatus.AWAITING_CAPTCHA
+            ))
+            .catch(err => {
+                if (err == "abort") return;
+
+                console.error(err);
+                setAnalysisError(t("analysisError"));
             });
 
-            setAnalysisStatus(AnalysisStatus.AWAITING_CAPTCHA);
-        } catch (err) {
-            console.error(err);
-            setAnalysisError(t("analysisError"));
-        }
+        return evaluator.controller;
     }
 
     return evaluateGame;
