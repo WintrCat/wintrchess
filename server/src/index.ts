@@ -9,7 +9,7 @@ import connectDatabase from "@/database/connect";
 import hostnameWhitelist from "@/lib/security/whitelist";
 import getAuth from "@/lib/auth";
 import mainRouter from "./routes";
-import cors from "cors"; // Add this import
+import cors from "cors";
 
 dotenv.config();
 
@@ -31,10 +31,10 @@ async function main() {
     const app = express();
     // TODO: use cors only in dev mode
     app.use(cors({
-        origin: process.env.CORS_ORIGIN || true, // or specify your allowed origins
-        credentials: true, // if you need to support cookies/auth
-        methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // allowed methods
-        allowedHeaders: ["Content-Type", "Authorization"] // allowed headers
+        origin: process.env.CORS_ORIGIN || true,
+        credentials: true,
+        methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+        allowedHeaders: ["Content-Type", "Authorization"]
     }));
     app.use(cookieParser());
     app.use(hostnameWhitelist);

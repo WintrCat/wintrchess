@@ -83,7 +83,6 @@ module.exports = {
       (entryName) =>
         new HtmlWebpackPlugin({
           filename: `${entryName}.html`,
-          // This is the corrected template path logic
           template: `./public/apps/${entryName === "internal" || entryName === "settings" || entryName === "unfound"
             ? `${entryName}.html`
             : entryName === "signin" || entryName === "resetPassword" || entryName === "profile"
