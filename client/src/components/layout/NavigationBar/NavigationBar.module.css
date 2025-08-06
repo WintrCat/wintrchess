@@ -104,9 +104,18 @@
     user-select: none;
 }
 
+.profileIcon {
+    display: none;
+    height: 35px;
+}
+
 @media (max-width: 450px) {
-    .profileMenu > span {
+    .profileUsername {
         display: none;
+    }
+
+    .profileIcon {
+        display: inline;
     }
 }
 
