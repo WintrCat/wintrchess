@@ -18,7 +18,8 @@ function DetailUpdateDialog({
     onClose,
     onConfirm,
     getErrorMessage,
-    buttonDisabled
+    buttonDisabled,
+    buttonDisabledOnError = true
 }: DetailUpdateDialogProps) {
     const { t } = useTranslation("common");
 
@@ -63,7 +64,10 @@ function DetailUpdateDialog({
                     backgroundColor: ButtonColour.BLUE,
                     ...buttonStyle
                 }}
-                disabled={!!error || buttonDisabled?.(input)}
+                disabled={
+                    (!!error && buttonDisabledOnError)
+                    || buttonDisabled?.(input)
+                }
                 onClick={handleConfirmClick}
             >
                 {t("confirm")}

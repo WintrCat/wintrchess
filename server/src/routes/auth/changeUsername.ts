@@ -19,14 +19,19 @@ router.post("/change-username", async (req, res) => {
         return res.sendStatus(StatusCodes.UNAUTHORIZED);
     }
 
-    const username = req.body;
+    const username: string = req.body;
 
     if (!schemas.username.safeParse(username).success)
         return res.sendStatus(StatusCodes.BAD_REQUEST);
 
+    const existingUsernameHolder = await User.findOne({ username });
+
+    if (existingUsernameHolder)
+        return res.sendStatus(StatusCodes.CONFLICT);
+
     await User.updateOne(
         { username: req.user.username },
-        { username: username }
+        { username }
     );
 
     res.sendStatus(StatusCodes.OK);

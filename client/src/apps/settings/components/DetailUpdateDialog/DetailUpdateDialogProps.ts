@@ -11,6 +11,7 @@ interface DetailUpdateDialogProps {
     onConfirm: (input: string) => void | Promise<void>;
     getErrorMessage?: (input: string) => string | undefined;
     buttonDisabled?: (input: string) => boolean;
+    buttonDisabledOnError?: boolean;
 }
 
 export default DetailUpdateDialogProps;

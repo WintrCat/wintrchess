@@ -21,6 +21,7 @@ import * as styles from "./EditProfile.module.css";
 
 import iconInterfaceVisibleenabled from "@assets/img/interface/visible_enabled.svg";
 import iconInterfaceVisibledisabled from "@assets/img/interface/visible_disabled.svg";
+import { StatusCodes } from "http-status-codes";
 
 function EditProfile() {
     const { t } = useTranslation(["common", "settings"]);
@@ -54,10 +55,16 @@ function EditProfile() {
     }
 
     async function updateUsername(username: string) {
-        await fetch("/auth/change-username", {
+        const response = await fetch("/auth/change-username", {
             method: "POST",
             body: username
         });
+
+        if (response.status == StatusCodes.CONFLICT) {
+            throw new Error(t("account.errors.usernameTaken"));
+        } else if (!response.ok) {
+            throw new Error(t("unknownError"));
+        }
 
         refetch();
     }
@@ -129,6 +136,7 @@ function EditProfile() {
                     input, schemas.username
                 )}
                 buttonDisabled={input => input.length < 3}
+                buttonDisabledOnError={false}
             >
                 {t(`${editProfileStrings}.username.message`, { ns: "settings" })}
             </DetailUpdateDialog>}
