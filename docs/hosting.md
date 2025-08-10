@@ -27,7 +27,7 @@ These are the environment variables that you can set when hosting WintrChess:
 NODE_ENV="production"
 ```
 
-The environment that the app is running in. Can be one of two values: `production` (default) and `development`. In development mode, some features are enabled to help with debugging.
+The environment that the app is running in. Can be one of two values: `production` (default) and `development`. In production, only requests with the `Host` header set to `wintrchess.com` are accepted. You can edit the hostname whitelist in `server/src/lib/security/whitelist.ts`.
 
 ```toml
 PORT=8080
