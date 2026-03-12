@@ -1,4 +1,6 @@
+
 {
+    "name": "wintrchess",
     "workspaces": [
         "./shared",
         "./server",
