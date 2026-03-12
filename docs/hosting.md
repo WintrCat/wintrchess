@@ -108,6 +108,15 @@ The email address that should be listed as the contact for the website. The auto
 
 For local development you can use your own email and create an app password here: https://myaccount.google.com/apppasswords
 
+## Deploy with VSCode and debugging
+Open the project in [VSCode](https://code.visualstudio.com/) and start the "Debug app" task.
+
+This should:
+1. Start the database in Docker
+2. Build the app
+3. Run the app
+4. Attach debugging for the backend server and shared files
+
 ## Deploy manually
 
 ### Start the database
