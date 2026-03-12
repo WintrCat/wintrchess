@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Debug app",
+            "request": "launch",
+            "runtimeArgs": [
+                "run-script",
+                "dev"
+            ],
+            "runtimeExecutable": "npm",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node",
+            "preLaunchTask": "Start Database",
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "server running on port (\\d+)",
+                "uriFormat": "http://localhost:%s"
+            },
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+    ]
+}

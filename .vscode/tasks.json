@@ -1,0 +1,10 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start Database",
+            "type": "shell",
+            "command": "docker compose up --no-build -d database",
+        }
+    ]
+}

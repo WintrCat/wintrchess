@@ -4,10 +4,11 @@
 
 ## Prerequisites
 
-- Git
-- Node.js 22 or later
-- MongoDB
-- Docker, if you want to host with that
+- [Git](https://git-scm.com/install/)
+   - This may be pre-installed on MacOS or Linux. Run `git --version` to confirm installation
+- [Node.js 22 or later](https://nodejs.org/en/download)
+- [MongoDB](https://www.mongodb.com/try/download/community), if running running outside of Docker
+- [Docker](https://www.docker.com/products/docker-desktop/), if running through Docker's containerized environment
 
 ## Setup
 
@@ -21,6 +22,7 @@ cd wintrchess
 ```
 
 ### Set environment variables
+Create a `.env` file at the top level directory to hold environmental variables
 
 These are the environment variables that you can set when hosting WintrChess:
 
@@ -48,7 +50,7 @@ For example, `http://localhost:8080` or `https://wintrchess.com`.
 DATABASE_URI="mongodb://" # ...
 ```
 
-A connection string for a MongoDB database. Collections, indexes etc. will be created when the app runs. Defaults to `mongodb://database/wintrchess`.
+A connection string for a MongoDB database. Collections, indexes etc. will be created when the app runs. Defaults to `mongodb://database/wintrchess`. If running the database through Docker, this should be `mongodb://localhost:27017/`
 
 ```toml
 ANALYSIS_SESSION_ACTIONS=80
@@ -100,9 +102,30 @@ AUTOMATED_EMAIL_ADDRESS="no-reply@wintrchess.com"
 AUTOMATED_EMAIL_KEY="aaaa bbbb cccc dddd"
 ```
 
+> Required for account creation and verification
+
 The email address that should be listed as the contact for the website. The automated email address is the address that sends automated correspondence like email verification and password resets. To login to the account, use the automated email key, which is the password to the account / Google Workspace app password.
 
+For local development you can use your own email and create an app password here: https://myaccount.google.com/apppasswords
+
+## Deploy with VSCode and debugging
+Open the project in [VSCode](https://code.visualstudio.com/) and start the "Debug app" task.
+
+This should:
+1. Start the database in Docker
+2. Build the app
+3. Run the app
+4. Attach debugging for the backend server and shared files
+5. Open a browser navigated to the app 
+
 ## Deploy manually
+
+### Start the database
+Either run Mongo DB locally or through Docker.
+
+To run MongoDB in Docker, use the command `docker compose up database`.
+
+In either case, ensure your `DATABASE_URI` environmental variable is set to point at the database.
 
 ### Install dependencies
 
