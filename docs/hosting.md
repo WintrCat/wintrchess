@@ -116,6 +116,7 @@ This should:
 2. Build the app
 3. Run the app
 4. Attach debugging for the backend server and shared files
+5. Open a browser navigated to the app 
 
 ## Deploy manually
 
