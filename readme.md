@@ -42,3 +42,4 @@ Libraries, some types and common logic is stored here and can be accessed by bot
 
 If you like this project or find it useful, consider buying me a little coffee! Everything is appreciated so much 💙
 [https://ko-fi.com/wintrcat](https://ko-fi.com/wintrcat)
+.
