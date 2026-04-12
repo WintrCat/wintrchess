@@ -6,6 +6,7 @@ import { accountAuthenticator } from "@/lib/security/account";
 const router = Router();
 
 router.get("/analysis", appRouter("features/analysis.html"));
+router.get("/learn", appRouter("features/learn.html"));
 
 router.get("/archive",
     accountAuthenticator(true),

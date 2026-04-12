@@ -1,0 +1,135 @@
+.wrapper {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.openingColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 320px;
+    min-width: 280px;
+    background-color: var(--ui-shade-3);
+    border-radius: 10px;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.openingHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    margin: 0;
+}
+
+.count {
+    color: var(--ui-shade-9);
+}
+
+.search {
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: var(--ui-shade-1);
+    color: white;
+}
+
+.openingList {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: calc(100vh - 230px);
+    overflow-y: auto;
+}
+
+.openingButton {
+    text-align: left;
+    border: none;
+    border-radius: 7px;
+    padding: 8px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.openingButton:hover,
+.openingButton[data-selected="true"] {
+    background-color: var(--ui-shade-1);
+}
+
+.boardColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.boardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--ui-shade-3);
+}
+
+.activeOpening {
+    margin: 0;
+}
+
+.progress {
+    color: var(--ui-shade-9);
+}
+
+.flipButton {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+}
+
+.board {
+    width: 100%;
+    max-width: min(860px, 70vh);
+}
+
+.controls {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: var(--ui-shade-3);
+}
+
+.controls img {
+    width: 40px;
+    border-radius: 8px;
+    background-color: var(--ui-shade-2);
+    cursor: pointer;
+}
+
+.enginePanel {
+    border-radius: 10px;
+    background-color: var(--ui-shade-3);
+    padding: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .openingColumn {
+        width: 100%;
+    }
+
+    .openingList {
+        max-height: 260px;
+    }
+}

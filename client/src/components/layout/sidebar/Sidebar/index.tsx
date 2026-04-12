@@ -47,6 +47,14 @@ function Sidebar({ style, onClose }: SidebarProps) {
                 </SidebarTab>
 
                 <SidebarTab
+                    url="/learn"
+                    icon={iconIconsAnalysis}
+                    style={{ width: "100%" }}
+                >
+                    Learn
+                </SidebarTab>
+
+                <SidebarTab
                     url="/archive" 
                     icon={iconIconsArchive} 
                     iconSize="20px"
