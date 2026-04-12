@@ -59,6 +59,13 @@ function NavigationBar() {
                 </HoverDropdown>
 
                 <HoverDropdown
+                    icon={iconIconsAnalysis}
+                    url="/learn"
+                >
+                    Learn
+                </HoverDropdown>
+
+                <HoverDropdown
                     icon={iconIconsArchive}
                     url="/archive"
                 >
