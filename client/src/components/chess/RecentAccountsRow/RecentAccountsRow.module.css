@@ -1,0 +1,87 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+
+    padding: 8px 10px;
+
+    background-color: var(--ui-shade-4);
+    border-top: 1px solid var(--ui-shade-5);
+}
+
+.label {
+    color: var(--ui-shade-7);
+    font-size: 0.85rem;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 4px 8px;
+    padding-right: 4px;
+
+    border: none;
+    border-radius: 999px;
+    background-color: var(--ui-shade-5);
+    color: white;
+    font-size: 0.9rem;
+    font-family: inherit;
+
+    cursor: pointer;
+    transition: filter 0.2s ease;
+}
+
+.chip:hover {
+    filter: brightness(1.15);
+}
+
+.platformIcon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.username {
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.removeButton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    margin-left: 2px;
+
+    border: none;
+    border-radius: 999px;
+    background-color: var(--ui-shade-6);
+    color: white;
+    font-size: 0.9rem;
+    line-height: 1;
+
+    opacity: 0;
+    pointer-events: none;
+
+    cursor: pointer;
+    transition: opacity 0.15s ease, filter 0.2s ease;
+}
+
+.chip:hover .removeButton,
+.chipRevealed .removeButton {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.removeButton:hover {
+    filter: brightness(1.2);
+}

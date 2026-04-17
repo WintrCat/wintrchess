@@ -14,6 +14,7 @@ import LogMessage from "@/components/common/LogMessage";
 import MonthSelector from "@/components/settings/MonthSelector";
 import GameListing from "@/components/chess/GameListing";
 import displayToast from "@/lib/toast";
+import useRecentAccounts, { gameSourceToPlatform } from "@/hooks/useRecentAccounts";
 
 import GameSearchMenuProps from "./GameSearchMenuProps";
 import * as styles from "./GameSearchMenu.module.css";
@@ -45,6 +46,8 @@ function GameSearchMenu({
     onGameSelect
 }: GameSearchMenuProps) {
     const { t } = useTranslation("analysis");
+
+    const { addOrBump } = useRecentAccounts();
 
     const queryClient = useQueryClient();
 
@@ -91,6 +94,11 @@ function GameSearchMenu({
     });
 
     function selectListing(game: Game) {
+        const platform = gameSourceToPlatform(gameSource.key);
+        if (platform) {
+            addOrBump(platform, username);
+        }
+
         displayToast({
             message: t("gameSearchMenu.selectedToast"),
             theme: "success"

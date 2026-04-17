@@ -14,6 +14,7 @@ import useAnalysisBoardStore from "@/apps/features/analysis/stores/AnalysisBoard
 import Button from "@/components/common/Button";
 import FileUploader from "@/components/common/FileUploader";
 import GameSearchMenu from "../GameSearchMenu";
+import RecentAccountsRow from "../RecentAccountsRow";
 
 import GameSelectorProps from "./GameSelectorProps";
 import * as styles from "./GameSelector.module.css";
@@ -148,6 +149,10 @@ function GameSelector({
                 openGameSearchMenu();
             }}
         />
+
+        {gameSource.selectorButton == GameSelectorButton.SEARCH_GAMES
+            && <RecentAccountsRow onUsernameSelect={updateFieldInput} />
+        }
 
         {gameSource.selectorButton == GameSelectorButton.SEARCH_GAMES
             && <Button
